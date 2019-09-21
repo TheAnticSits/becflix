@@ -4,16 +4,18 @@ public class Movie {
 
     private String title;
     private int year;
-    private String director;
     private String genre;
+    private String director;
+    private String franchise;
     private int rating;
     private String importance;
 
     public Movie(){
         this.title = title;
         this.year = year;
-        this.director = director;
         this.genre = genre;
+        this.director = director;
+        this.franchise = franchise;
         this.rating = rating;
         this.importance = importance;
     }
@@ -34,6 +36,14 @@ public class Movie {
         this.year = year;
     }
 
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
     public String getDirector() {
         return director;
     }
@@ -42,12 +52,12 @@ public class Movie {
         this.director = director;
     }
 
-    public String getGenre() {
-        return genre;
+    public String getFranchise() {
+        return franchise;
     }
 
-    public void setGenre(String genre) {
-        this.genre = genre;
+    public void setFranchise(String franchise) {
+        this.franchise = franchise;
     }
 
     public int getRating() {
