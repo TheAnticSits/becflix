@@ -2,13 +2,17 @@ package org.launchcode.becflix.Models;
 
 public class Movie {
 
+//    private int id;
     private String title;
     private int year;
     private String genre;
     private String director;
     private String franchise;
-    private int rating;
+    private String rating;
     private String importance;
+//    private Array keywords;
+
+
 
     public Movie(){
         this.title = title;
@@ -60,11 +64,11 @@ public class Movie {
         this.franchise = franchise;
     }
 
-    public int getRating() {
+    public String getRating() {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(String rating) {
         this.rating = rating;
     }
 
