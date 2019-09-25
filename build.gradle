@@ -30,6 +30,6 @@ dependencies {
 
 //in conjunction with devtools dependency this will allow intellij to monitor the template files that we are working on
 //when it sees a change, it will deploy the change to the server while the server is still running.
-bootRun{
-	addResources = true
+bootRun {
+    sourceResources sourceSets.main
 }
