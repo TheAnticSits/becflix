@@ -1,6 +1,8 @@
 package org.launchcode.becflix.Controllers;
 
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
@@ -14,8 +16,9 @@ public class MovieController {
     //@ResponseBody allows the controller method to return text directly from the controller method(the handler) removed from here.
     //request path is now /movie
     @RequestMapping(value = "")
-    public String index(){
-
+    public String index(Model model){
+        //adding an attribute to the model in a key/value pair.
+        model.addAttribute("title", "My BecFlix");
         return "movie/index";
 
     }
