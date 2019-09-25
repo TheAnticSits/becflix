@@ -2,7 +2,7 @@ package org.launchcode.becflix.Controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+
 
 @Controller //spring recognizes it as a controller
 @RequestMapping(value="movie") //establishes a base request path for every method within the controller.
