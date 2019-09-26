@@ -33,6 +33,14 @@ public class MovieController {
         //the model is what passes data into the view.
         model.addAttribute("title", "My BecFlix");
         return "movie/index";
+    }
+
+    //adding controller method to display the add for more movies.
+    @RequestMapping(value="addMovie")
+    public String displayAddMovieForm(Model model){
+        //adding the title and sending the controller to the template addMovie
+        model.addAttribute("title", "Add Movie");
+        return "movie/addMovie";
 
     }
 }
