@@ -17,8 +17,40 @@ syntax highlighting and error reporting.  Tells intellij that this should confor
 
 <form method="post">
 <!--    all tags must be closed. "/"-->
+    Movie Title
+    <br>
     <input type="text" name="movieName" />
 <!--    value attribute in submit attribute customizes the button-->
+    <br>
+    Release Year
+    <br>
+    <input type="int" name="year" />
+    <br>
+    Genre
+    <br>
+<!--    TODO change this to a drop down.-->
+    <input type="text" name="genre" />
+    <br>
+    Director
+    <br>
+    <input type="text" name="director" />
+    <br>
+    If this movie is part of a Franchise, enter the Franchise name.
+    <br>
+    <input type="text" name="franchise" />
+    <br>
+<!--    TODO change this to a drop down.-->
+    Movie Rating.
+    <br>
+    <input type="text" name="rating" />
+    <br>
+<!--    TODO change this to a drop down.-->
+    How important is this to us?
+    <br>
+    <input type="text" name="importance" />
+    <br>
+
+
     <input type="submit" value="Add To Movie List" />
 </form>
 </body>

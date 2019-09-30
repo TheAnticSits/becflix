@@ -3,7 +3,7 @@ package org.launchcode.becflix.Models;
 public class Movie {
 
 //    private int id;
-    private String title;
+    private String movieName;
     private int year;
     private String genre;
     private String director;
@@ -15,7 +15,7 @@ public class Movie {
 
 
     public Movie(){
-        this.title = title;
+        this.movieName = movieName;
         this.year = year;
         this.genre = genre;
         this.director = director;
@@ -25,11 +25,11 @@ public class Movie {
     }
 
     public String getTitle() {
-        return title;
+        return movieName;
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        this.movieName = title;
     }
 
     public int getYear() {
