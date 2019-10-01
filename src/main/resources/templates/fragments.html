@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:fragment="head">
+    <meta charset="UTF-8"/>
+    <title th:text="${title}">BecFlix!</title>
+</head>
+<body>
+<nav th:fragment="navigation">
+    <a href="/movie">List of Movies</a> |        |
+    <a href="/movie/addMovie">Add A Movie To My List</a>
+</nav>
+
+</body>
+</html>
