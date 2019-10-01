@@ -22,9 +22,11 @@ syntax highlighting and error reporting.  Tells intellij that this should confor
     <input type="text" name="movieName" />
 <!--    value attribute in submit attribute customizes the button-->
     <br>
+    <br>
     Release Year
     <br>
     <input type="int" name="year" />
+    <br>
     <br>
     Genre
     <br>
@@ -70,13 +72,16 @@ syntax highlighting and error reporting.  Tells intellij that this should confor
         <option value="psychoThriller">Psychological Thriller</option>
     </select>
     <br>
+    <br>
     Director
     <br>
     <input type="text" name="director" />
     <br>
+    <br>
     If this movie is part of a Franchise, enter the Franchise name.
     <br>
     <input type="text" name="franchise" />
+    <br>
     <br>
     Movie Rating.
     <br>
@@ -88,10 +93,20 @@ syntax highlighting and error reporting.  Tells intellij that this should confor
         <option value="nc17">Rated NC-17</option>
     </select>
     <br>
-<!--    TODO change this to a drop down.-->
+    <br>
     How important is this to us?
     <br>
-    <input type="text" name="importance" />
+    <select name="importance">
+        <option value="extremely">Extremely Important</option>
+        <option value="super">Super Important</option>
+        <option value="very">Very Important</option>
+        <option value="important">Important</option>
+        <option value="notUrgent">Not Urgent</option>
+        <option value="wait">It Can Wait</option>
+        <option value="kinda">Kinda Want To See It</option>
+        <option value="meh">Meh</option>
+    </select>
+    <br>
     <br>
 
 
