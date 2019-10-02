@@ -24,11 +24,11 @@ public class Movie {
         this.importance = importance;
     }
 
-    public String getTitle() {
+    public String getMovieName() {
         return movieName;
     }
 
-    public void setTitle(String title) {
+    public void setMovieName(String title) {
         this.movieName = title;
     }
 

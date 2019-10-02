@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.HttpServletRequest;
+
 import java.util.ArrayList;
 
 
@@ -35,7 +35,7 @@ public class MovieController {
 
         //adding an attribute to the model in a key/value pair.
         //the model is what passes data into the view.
-        model.addAttribute("title", "My BecFlix");
+        model.addAttribute("title", "BecFlix");
         return "movie/index";
     }
 
