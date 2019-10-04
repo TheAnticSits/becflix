@@ -6,8 +6,22 @@ background-color: coral;
 
 nav{
 font-family: cursive;
+text-align: right;
 }
 
 head{
 text-align: center;
+}
+
+form{
+font-family: cursive;
+}
+
+h1{
+text-align: center;
+}
+
+h2{
+font-family: ariel;
+color: purple;
 }
