@@ -1,3 +1,13 @@
 body{
 font-family: sans-serif;
+background-color: coral;
+
+}
+
+nav{
+font-family: cursive;
+}
+
+head{
+text-align: center;
 }
