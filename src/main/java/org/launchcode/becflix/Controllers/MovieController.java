@@ -8,14 +8,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
-import java.util.ArrayList;
+
+import java.util.HashMap;
 
 
 @Controller //spring recognizes it as a controller
 @RequestMapping(value="movie") //establishes a base request path for every method within the controller.
 public class MovieController {
 
-    ArrayList<String> movies = new ArrayList<>();
+    //ArrayList<String> movies = new ArrayList<>();
+    HashMap<String, String> movies = new HashMap<>();
     //method for the index
     //value specifies the route to which requests should be mapped to this handler
     //the ResponseBody annotation is used to bind the HTTP request/response body with a domain object in method parameter or return type
@@ -52,7 +54,7 @@ public class MovieController {
     @RequestMapping(value="addMovie", method = RequestMethod.POST)
     public String processAddMovieForm(@RequestParam String movieName){
         //add the movie from the form
-        movies.add(movieName);
+        //movies.add(movieName);
         //Redirect to /movie the path that's empty. relative to any requestmapping configured on controller
         return "redirect:";
     }
