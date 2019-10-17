@@ -16,7 +16,6 @@ import java.util.HashMap;
 @RequestMapping(value="movie")
 public class MovieController {
 
-    //ArrayList<String> movies = new ArrayList<>();
     HashMap<String, String> movies = new HashMap<>();
 
     @RequestMapping(value = "")
@@ -39,10 +38,7 @@ public class MovieController {
     public String processAddMovieForm(@RequestParam String movieName, @RequestParam String genre){
 
         movies.put(movieName, genre);
-        System.out.println(movies);
-        //add the movie from the form
-        //movies.add(movieName);
-        //Redirect to /movie the path that's empty. relative to any requestmapping configured on controller
+
         return "redirect:";
     }
 }
