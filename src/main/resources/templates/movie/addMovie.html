@@ -20,11 +20,11 @@ syntax highlighting and error reporting.  Tells intellij that this should confor
 <nav th:replace="fragments :: navigation"></nav>
 
 <h2>Add New Movie Details</h2>
-<form method="post">
+<form method="post" style="max-width:600px;">
 <!--    all tags must be closed. "/"-->
-    Movie Title
+    <label for="name-field">Movie Title</label>
     <br>
-    <input type="text" name="movieName" />
+    <input class="form-control" id="name-field" type="text" name="movieName" />
 <!--    value attribute in submit attribute customizes the button-->
     <br>
     <br>
