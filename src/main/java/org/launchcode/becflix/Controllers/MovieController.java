@@ -35,9 +35,9 @@ public class MovieController {
     }
 
     @RequestMapping(value="addMovie", method = RequestMethod.POST)
-    public String processAddMovieForm(@RequestParam String movieName, @RequestParam String genre){
+    public String processAddMovieForm(@RequestParam String movieName, @RequestParam String year){
 
-        movies.put(movieName, genre);
+        movies.put(movieName, year);
 
         return "redirect:";
     }

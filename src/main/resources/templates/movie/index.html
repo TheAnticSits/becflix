@@ -29,11 +29,13 @@ syntax highlighting and error reporting.  Tells intellij that this should confor
 
     <tr>
         <th>Title</th>
-        <th>Rating</th>
+        <th>||</th>
+        <th>Year of Release</th>
     </tr>
 
     <tr th:each="movie : ${movies}">
         <td th:text="${movie.key}"></td>
+        <td>||</td>
         <td th:text="${movie.value}"></td>
     </tr>
 </table>
