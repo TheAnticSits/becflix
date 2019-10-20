@@ -17,8 +17,9 @@ form{
 font-family: cursive;
 }
 
-h1{
+.titleLine{
 text-align: center;
+font-size: 500%;
 }
 
 h2{
