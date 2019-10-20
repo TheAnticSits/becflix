@@ -39,6 +39,10 @@ syntax highlighting and error reporting.  Tells intellij that this should confor
         <td th:text="${movie.value}"></td>
     </tr>
 </table>
-
+</br>
+</br>
+<p th:if="${movies} and ${movies.size()}">
+<a href="/movie/addMovie">Add Another Movie</a>
+</p>
 </body>
 </html>
