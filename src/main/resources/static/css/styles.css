@@ -30,6 +30,7 @@ article{
 background-color: lightblue;
 }
 
-form-control{
-color: red;
+.movieTitles{
+color: teal;
+font-weight: bold;
 }
