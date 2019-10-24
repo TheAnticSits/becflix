@@ -12,9 +12,7 @@ public class Movie {
     private String importance;
 //    private Array keywords;
 
-
-
-    public Movie(){
+    public Movie(String movieName, int year, String genre, String director, String franchise, String rating, String importance) {
         this.movieName = movieName;
         this.year = year;
         this.genre = genre;
@@ -23,6 +21,7 @@ public class Movie {
         this.rating = rating;
         this.importance = importance;
     }
+
 
     public String getMovieName() {
         return movieName;
