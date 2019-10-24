@@ -40,3 +40,7 @@ font-weight: bold;
      height: 100px;
      width: 400px;
 }
+
+.movieImportance {
+    color: red;
+}

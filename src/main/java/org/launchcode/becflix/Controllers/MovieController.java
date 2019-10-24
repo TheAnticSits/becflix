@@ -39,6 +39,7 @@ public class MovieController {
     public String processAddMovieForm(@RequestParam String movieName, @RequestParam int year, @RequestParam String genre, @RequestParam String director, @RequestParam String franchise, @RequestParam String rating, @RequestParam String importance){
 
         Movie newMovie = new Movie(movieName, year, genre, director, franchise, rating, importance);
+
         movies.add(newMovie);
         return "redirect:";
     }
