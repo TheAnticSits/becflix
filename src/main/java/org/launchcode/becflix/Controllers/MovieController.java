@@ -37,6 +37,13 @@ public class MovieController {
 
     @RequestMapping(value="addMovie", method = RequestMethod.POST)
     public String processAddMovieForm(@RequestParam String movieName, @RequestParam int year, @RequestParam String genre, @RequestParam String director, @RequestParam String franchise, @RequestParam String rating, @RequestParam String importance){
+        String noEntry = "No Entry";
+        if(director.equals(null)){
+            director = noEntry;
+        }
+        if(franchise.equals(null)){
+            franchise = noEntry;
+        }
 
         Movie newMovie = new Movie(movieName, year, genre, director, franchise, rating, importance);
 
