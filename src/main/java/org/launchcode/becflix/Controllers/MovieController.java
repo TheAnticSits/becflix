@@ -1,6 +1,7 @@
 package org.launchcode.becflix.Controllers;
 
 
+import org.launchcode.becflix.Models.Movie;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
-
+import java.util.ArrayList;
 import java.util.HashMap;
 
 
@@ -16,7 +17,7 @@ import java.util.HashMap;
 @RequestMapping(value="movie")
 public class MovieController {
 
-    HashMap<String, String> movies = new HashMap<>();
+    static ArrayList<Movie> movies = new ArrayList<>();
 
     @RequestMapping(value = "")
     public String index(Model model){
@@ -35,10 +36,10 @@ public class MovieController {
     }
 
     @RequestMapping(value="addMovie", method = RequestMethod.POST)
-    public String processAddMovieForm(@RequestParam String movieName, @RequestParam String year){
+    public String processAddMovieForm(@RequestParam String movieName, @RequestParam int year){
 
-        movies.put(movieName, year);
-
+        Movie newMovie = new Movie(movieName, year);
+        movies.add(newMovie);
         return "redirect:";
     }
 }
