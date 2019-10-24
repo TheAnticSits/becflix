@@ -34,6 +34,7 @@ background-color: lightblue;
 .movieTitles{
 color: teal;
 font-weight: bold;
+font-size: 30px;
 }
 
 .myButton {
@@ -43,4 +44,5 @@ font-weight: bold;
 
 .movieImportance {
     color: red;
+    font-weight: bold;
 }

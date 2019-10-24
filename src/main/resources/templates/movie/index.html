@@ -9,7 +9,8 @@ syntax highlighting and error reporting.  Tells intellij that this should confor
 
 </head>
 <body>
-
+<hr/>
+<hr/>
 <article>
 </br>
     <big><h1 class="titleLine" th:text="${title}" th:align="center">Default Title</h1></big>
@@ -30,7 +31,7 @@ syntax highlighting and error reporting.  Tells intellij that this should confor
     <tr>
         <th>Title</th>
         <th>||</th>
-        <th>How Important?</th>
+        <th>Urgency To Watch?</th>
         <th>||</th>
         <th>Year of Release</th>
         <th>||</th>
@@ -42,7 +43,7 @@ syntax highlighting and error reporting.  Tells intellij that this should confor
         <th>||</th>
         <th>Franchise</th>
     </tr>
-
+<hr/>
     <tr th:each="movie : ${movies}">
         <td class="movieTitles" th:text="${movie.movieName}"></td>
         <td>||</td>
