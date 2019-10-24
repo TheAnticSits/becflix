@@ -12,13 +12,13 @@ public class Movie {
     private String importance;
 //    private Array keywords;
 
-    public Movie(String movieName, int year, String s, String director, String franchise, String rating, String genre) {
+    public Movie(String movieName, int year, String genre, String director, String franchise, String rating, String importance) {
         this.movieName = movieName;
         this.year = year;
-        this.genre = this.genre;
-        this.director = this.director;
-        this.franchise = this.franchise;
-        this.rating = this.rating;
+        this.genre = genre;
+        this.director = director;
+        this.franchise = franchise;
+        this.rating = rating;
         this.importance = importance;
     }
 
