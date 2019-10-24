@@ -31,12 +31,16 @@ syntax highlighting and error reporting.  Tells intellij that this should confor
         <th>Title</th>
         <th>||</th>
         <th>Year of Release</th>
+        <th>||</th>
+        <th>How Important?</th>
     </tr>
 
     <tr th:each="movie : ${movies}">
         <td class="movieTitles" th:text="${movie.movieName}"></td>
         <td>||</td>
         <td th:text="${movie.year}"></td>
+        <td>||</td>
+        <td th:text="${movie.importance}"></td>
     </tr>
 </table>
 </br>
