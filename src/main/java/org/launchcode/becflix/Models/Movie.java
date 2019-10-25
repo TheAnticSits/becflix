@@ -1,3 +1,4 @@
+
 package org.launchcode.becflix.Models;
 
 public class Movie {
