@@ -46,3 +46,9 @@ font-size: 30px;
     color: red;
     font-weight: bold;
 }
+
+.noMovies{
+    color: brown;
+    font-weight: bold;
+    font-size: 40px;
+}
