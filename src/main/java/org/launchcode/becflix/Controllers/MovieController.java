@@ -49,4 +49,19 @@ public class MovieController {
         movies.add(newMovie);
         return "redirect:";
     }
+
+    @RequestMapping(value = "remove", method = RequestMethod.GET)
+    public String displayRemoveMovieForm(Model model){
+        model.addAttribute("movies", movies);
+        model.addAttribute("title", "Remove Movie(s)");
+        return "movie/removeMovie";
+    }
+
+    @RequestMapping(value = "remove", method = RequestMethod.POST)
+    public String processRemoveMovieForm(@RequestParam ArrayList<String> movie){
+        for(String aMovie : movie){
+            movies.remove(aMovie);
+        }
+        return "redirect:";
+    }
 }

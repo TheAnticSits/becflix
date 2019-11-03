@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body class="container">
+
+<h1 th:text="${title}">Default Title</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<form method="post">
+
+    <div th:each="movie : ${movies}" class="checkbox">
+        <input type="checkbox" name="movie" th:value="${movie.movieName}" th:id="${movie.movieName}"/>
+        <label th:for="${movie.movieName}" th:text="$movie.movieName}"></label>
+        <br/>
+    </div>
+    <input type="submit" value="Remove Movie(s)"/>
+</form>
+
+</body>
+</html>
