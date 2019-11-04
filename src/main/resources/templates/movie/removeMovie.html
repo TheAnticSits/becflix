@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head th:replace="fragments :: head"></head>
-<body class="container">
+<head th:replace="fragments :: head">
+
+</head>
+<body>
 
 <h1 th:text="${title}">Default Title</h1>
 
 <nav th:replace="fragments :: navigation"></nav>
 
+<p class="noMovies" th:unless="${movies} and ${movies.size()}">No movies in the List</p>
+
+<h2>My BecFlix List:</h2>
+
 <form method="post">
 
     <div th:each="movie : ${movies}" class="checkbox">
-        <input type="checkbox" name="movie" th:value="${movie.movieName}" th:id="${movie.movieName}"/>
+        <input type="checkbox" name="movie" th:value="${movie.movieName}"/>
         <label th:for="${movie.movieName}" th:text="$movie.movieName}"></label>
         <br/>
     </div>
