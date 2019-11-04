@@ -17,7 +17,7 @@
 
     <div th:each="movie : ${movies}" class="checkbox">
         <input type="checkbox" name="movie" th:value="${movie.movieName}"/>
-        <label th:for="${movie.movieName}" th:text="$movie.movieName}"></label>
+        <label th:for="movie" th:text="${movie.movieName}"></label>
         <br/>
     </div>
     <input type="submit" value="Remove Movie(s)"/>
