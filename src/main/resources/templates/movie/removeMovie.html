@@ -3,7 +3,7 @@
 <head th:replace="fragments :: head">
 
 </head>
-<body>
+<body class="container">
 
 <hr/>
 <hr/>
@@ -19,12 +19,12 @@
 
 <p class="noMovies" th:unless="${movies} and ${movies.size()}">No movies in the List</p>
 
-<h2>My BecFlix List:</h2>
+<h2>BecFlix Titles:</h2>
 
 <form method="post">
 
     <div th:each="movie : ${movies}" class="checkbox">
-        <input type="checkbox" name="movie" th:value="${movie.movieName}"/>
+        <input type="checkbox" name="theseMovies" th:value="${movie.movieName}"/>
         <label th:for="${movie.movieName}" th:text="${movie.movieName}"></label>
         <br/>
     </div>
