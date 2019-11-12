@@ -24,7 +24,7 @@
 <form method="post">
 
     <div th:each="movie : ${movies}" class="checkbox">
-        <input type="checkbox" name="theseMovies" th:value="${movie.movieName}"/>
+        <input type="checkbox" name="movie" th:value="${movie.movieName}" th:id="${movie.movieName}"/>
         <label th:for="${movie.movieName}" th:text="${movie.movieName}"></label>
         <br/>
     </div>

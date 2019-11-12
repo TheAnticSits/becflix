@@ -58,11 +58,11 @@ public class MovieController {
     }
 
     @RequestMapping(value = "removeMovie", method = RequestMethod.POST)
-    public String processRemoveMovieForm(@RequestParam ArrayList<String> theseMovies){
+    public String processRemoveMovieForm(@RequestParam ArrayList<String> movie){
 
-        for(String thisMovie : theseMovies){
-            System.out.println(thisMovie);
-            movies.remove(thisMovie);
+        for(String aMovie : movie){
+            System.out.println(aMovie);
+            movies.remove(aMovie);
         }
         return "redirect:";
     }
