@@ -2,6 +2,7 @@
 package org.launchcode.becflix.Controllers;
 
 import org.launchcode.becflix.Models.Movie;
+import org.launchcode.becflix.Models.MovieData;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,12 +15,10 @@ import java.util.ArrayList;
 @RequestMapping(value="movie")
 public class MovieController {
 
-    static ArrayList<Movie> movies = new ArrayList<>();
-
     @RequestMapping(value = "")
     public String index(Model model){
 
-        model.addAttribute("movies", movies);
+        model.addAttribute("movies", MovieData.getAll());
 
         model.addAttribute("title", "BecFlix");
         return "movie/index";
@@ -46,23 +45,23 @@ public class MovieController {
 
         Movie newMovie = new Movie(movieName, year, genre, director, franchise, rating, importance);
 
-        movies.add(newMovie);
+        MovieData.add(newMovie);
         return "redirect:";
     }
 
     @RequestMapping(value = "removeMovie", method = RequestMethod.GET)
     public String displayRemoveMovieForm(Model model){
-        model.addAttribute("movies", movies);
+        model.addAttribute("movies", MovieData.getAll());
         model.addAttribute("title", "Remove Movie(s)");
         return "movie/removeMovie";
     }
 
     @RequestMapping(value = "removeMovie", method = RequestMethod.POST)
-    public String processRemoveMovieForm(@RequestParam ArrayList<String> movie){
+    public String processRemoveMovieForm(@RequestParam int[] movieIds){
 
-        for(String aMovie : movie){
-            System.out.println(aMovie);
-            movies.remove(aMovie);
+        for(int movieId : movieIds){
+
+            MovieData.remove(movieId);
         }
         return "redirect:";
     }

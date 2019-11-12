@@ -3,7 +3,7 @@ package org.launchcode.becflix.Models;
 
 public class Movie {
 
-//    private int id;
+
     private String movieName;
     private int year;
     private String genre;
@@ -11,9 +11,13 @@ public class Movie {
     private String franchise;
     private String rating;
     private String importance;
+    private int movieId;
+    private static int nextId = 1;
 //    private Array keywords;
 
     public Movie(String movieName, int year, String genre, String director, String franchise, String rating, String importance) {
+        this();
+//        calls the default constructor
         this.movieName = movieName;
         this.year = year;
         this.genre = genre;
@@ -23,6 +27,18 @@ public class Movie {
         this.importance = importance;
     }
 
+    public Movie() {
+        movieId = nextId;
+        nextId++;
+    }
+
+    public int getMovieId() {
+        return movieId;
+    }
+
+    public void setMovieId(int movieId) {
+        this.movieId = movieId;
+    }
 
     public String getMovieName() {
         return movieName;
@@ -79,4 +95,6 @@ public class Movie {
     public void setImportance(String importance) {
         this.importance = importance;
     }
+
+
 }
