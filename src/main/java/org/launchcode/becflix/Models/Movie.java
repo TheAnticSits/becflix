@@ -1,9 +1,14 @@
 
 package org.launchcode.becflix.Models;
 
+import com.sun.istack.internal.NotNull;
+
+import javax.validation.constraints.Size;
+
 public class Movie {
 
-
+    @NotNull
+    @Size(min=1)
     private String movieName;
     private int year;
     private String genre;
