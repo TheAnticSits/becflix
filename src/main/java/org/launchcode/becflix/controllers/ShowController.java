@@ -1,59 +1,60 @@
+/*
 package org.launchcode.becflix.controllers;
 
-/*
+
+import org.launchcode.becflix.models.Show;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 public class ShowController {
 
     @RequestMapping(value = "")
     public String index(Model model){
 
-        model.addAttribute("movies", MovieData.getAll());
+        model.addAttribute("movies", ShowData.getAll());
 
         model.addAttribute("title", "BecFlix");
-        return "movie/index";
+        return "show/index";
     }
 
-    @RequestMapping(value="addMovie", method = RequestMethod.GET)
-    public String displayAddMovieForm(Model model){
+    @RequestMapping(value="addShow", method = RequestMethod.GET)
+    public String displayAddShowForm(Model model){
 
-        model.addAttribute("title", "Add Movie");
-        return "movie/addMovie";
+        model.addAttribute("title", "Add Show");
+        return "show/addShow";
     }
 
-    @RequestMapping(value="addMovie", method = RequestMethod.POST)
-    public String processAddMovieForm(@RequestParam String movieName, @RequestParam int year, @RequestParam String genre, @RequestParam String director, @RequestParam String franchise, @RequestParam String rating, @RequestParam String importance){
+    @RequestMapping(value="addShow", method = RequestMethod.POST)
+    public String processAddShowForm(@RequestParam String showTitle, @RequestParam int year, @RequestParam String genre, @RequestParam String importance){
         String noEntry = "No Entry";
         String noInt = "";
-        if(director == null){
-            director = noEntry;
-        }
-        if(franchise.equals(null)) franchise = noEntry;
-        if(noInt.equals(year)){
-            year = 0;
-        }
 
-        Movie newMovie = new Movie(movieName, year, genre, director, franchise, rating, importance);
 
-        MovieData.add(newMovie);
+        Show newShow = new Show(showTitle, year, genre,  importance);
+
+        ShowData.add(newShow);
         return "redirect:";
     }
 
-    @RequestMapping(value = "removeMovie", method = RequestMethod.GET)
-    public String displayRemoveMovieForm(Model model){
-        model.addAttribute("movies", MovieData.getAll());
-        model.addAttribute("title", "Remove Movie(s)");
-        return "movie/removeMovie";
+    @RequestMapping(value = "removeShow", method = RequestMethod.GET)
+    public String displayRemoveShowForm(Model model){
+        model.addAttribute("shows", ShowData.getAll());
+        model.addAttribute("title", "Remove show(s)");
+        return "show/removeShow";
     }
 
-    @RequestMapping(value = "removeMovie", method = RequestMethod.POST)
-    public String processRemoveMovieForm(@RequestParam int[] movieIds){
+    @RequestMapping(value = "removeShow", method = RequestMethod.POST)
+    public String processRemoveShowForm(@RequestParam int[] showIds){
 
-        for(int movieId : movieIds){
+        for(int showId : showIds){
 
-            MovieData.remove(movieId);
+            ShowData.remove(showId);
         }
         return "redirect:";
     }
 
 }
+
 */

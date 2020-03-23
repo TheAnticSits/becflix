@@ -12,7 +12,7 @@ public class Show {
 //    private String spinoffOf;
 
 
-    public Show(String title, int year, String actor, String genre, String importance){
+    public Show(String title, int year, String genre, String importance){
         this.title = title;
         this.year = year;
 //        this.actor = actor;
