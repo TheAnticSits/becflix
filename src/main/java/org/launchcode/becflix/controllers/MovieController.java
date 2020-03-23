@@ -1,9 +1,8 @@
-/*
 
-package org.launchcode.becflix.Controllers;
+package org.launchcode.becflix.controllers;
 
-import org.launchcode.becflix.Models.Movie;
-import org.launchcode.becflix.Models.MovieData;
+import org.launchcode.becflix.models.Movie;
+import org.launchcode.becflix.models.MovieData;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping(value="movie")
-public class TvShowController {
+public class MovieController {
 
     @RequestMapping(value = "")
     public String index(Model model){
@@ -67,4 +66,3 @@ public class TvShowController {
         return "redirect:";
     }
 }
-*/

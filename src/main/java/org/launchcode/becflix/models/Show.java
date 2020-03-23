@@ -1,4 +1,4 @@
-package org.launchcode.becflix.Models;
+package org.launchcode.becflix.models;
 
 public class Show {
     private int showId;

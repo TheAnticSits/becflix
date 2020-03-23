@@ -1,5 +1,5 @@
 
-package org.launchcode.becflix.Models;
+package org.launchcode.becflix.models;
 
 public class Movie {
 
