@@ -1,4 +1,6 @@
-package org.launchcode.becflix.models;
+package org.launchcode.becflix.data;
+
+import org.launchcode.becflix.models.Movie;
 
 import java.util.ArrayList;
 

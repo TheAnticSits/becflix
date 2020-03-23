@@ -2,7 +2,7 @@
 package org.launchcode.becflix.controllers;
 
 import org.launchcode.becflix.models.Movie;
-import org.launchcode.becflix.models.MovieData;
+import org.launchcode.becflix.data.MovieData;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
