@@ -9,7 +9,7 @@ public class Show {
     private String importance;
     private static int nextId = 1;
 //    private Array keywords;
-//    private String spinoffOf;
+//    private String spinoff;
 
 
     public Show(String title, int year, String genre, String importance){
