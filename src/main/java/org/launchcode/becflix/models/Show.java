@@ -2,7 +2,7 @@ package org.launchcode.becflix.models;
 
 public class Show {
     private int showId;
-    private String title;
+    private String name;
     private int year;
 //    private String actor;
     private String genre;
@@ -12,8 +12,8 @@ public class Show {
 //    private String spinoff;
 
 
-    public Show(String title, int year, String genre, String importance){
-        this.title = title;
+    public Show(String name, int year, String genre, String importance){
+        this.name = name;
         this.year = year;
 //        this.actor = actor;
         this.genre = genre;
@@ -33,12 +33,12 @@ public class Show {
         this.showId = showId;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getYear() {

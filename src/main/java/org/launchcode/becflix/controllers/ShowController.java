@@ -29,12 +29,12 @@ public class ShowController {
     }
 
     @RequestMapping(value="addShow", method = RequestMethod.POST)
-    public String processAddShowForm(@RequestParam String showTitle, @RequestParam int year, @RequestParam String genre, @RequestParam String importance){
+    public String processAddShowForm(@RequestParam String showName, @RequestParam int year, @RequestParam String genre, @RequestParam String importance){
         String noEntry = "No Entry";
         String noInt = "";
 
 
-        Show newShow = new Show(showTitle, year, genre,  importance);
+        Show newShow = new Show(showName, year, genre,  importance);
 
         ShowData.add(newShow);
         return "redirect:";
