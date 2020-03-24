@@ -25,13 +25,13 @@ syntax highlighting and error reporting.  Tells intellij that this should confor
 <h2>Add New Movie Details</h2>
 <form method="post" style="max-width:600px;">
 <!--    all tags must be closed. "/"-->
-    <label for="name-field">Movie Title</label>
+    <label for="name-field">TV Show Title</label>
     <br>
-    <input class="form-control" id="name-field" type="text" name="movieName" />
+    <input class="form-control" id="name-field" type="text" name="showName" />
 <!--    value attribute in submit attribute customizes the button-->
     <br>
     <br>
-    Release Year
+    Year Show Started
     <br>
     <input type="int" name="year" value="0000"/>
     <br>
@@ -84,28 +84,7 @@ syntax highlighting and error reporting.  Tells intellij that this should confor
     </select>
     <br>
     <br>
-    Director
-    <br>
-    <input type="text" name="director" value="Unknown" />
-    <br>
-    <br>
-    If this movie is part of a Franchise, enter the Franchise name.
-    <br>
-    <input type="text" name="franchise" value="Unknown" />
-    <br>
-    <br>
-    Movie Rating.
-    <br>
-    <select name="rating">
-        <option value="G">Rated G</option>
-        <option value="PG">Rated PG</option>
-        <option value="PG-13">Rated PG-13</option>
-        <option value="R">Rated R</option>
-        <option value="NC-17">Rated NC-17</option>
-        <option value="NR">Not Rated</option>
-    </select>
-    <br>
-    <br>
+
     How important is this to you?
     <br>
     <select name="importance">
@@ -122,7 +101,7 @@ syntax highlighting and error reporting.  Tells intellij that this should confor
     <br>
 
 
-    <input class="myButton" type="submit" value="Add To Movie List" />
+    <input class="myButton" type="submit" value="Add To Show List" />
 </form>
 </body>
 </html>
