@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<!--attribute " xmlns:th="http://www.thymeleaf.org/ " uses a feature xhmtl. incorporates xml language
+pulls in information about the tags that are being used that are part of thymeleaf.  Allows for
+syntax highlighting and error reporting.  Tells intellij that this should conform to thymeleaf.-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+
+<!--replace this entire element with whatever is within head in the fragments file.-->
+<head th:replace="fragments :: head"></head>
+<body>
+<!--thymeleaf attribute with syntax to pull a piece of data.-->
+<!--the title using this pulled data will display on the screen as it is passed from the controller to here.-->
+<hr/>
+<hr/>
+<article>
+    <br/>
+    <big><h1 th:text="${title}">Default Title</h1></big>
+    <br/>
+</article>
+<hr/>
+<hr/>
+<!--adding navigation from fragments.-->
+<nav th:replace="fragments :: navigation"></nav>
+
+<h2>Add New Movie Details</h2>
+<form method="post" style="max-width:600px;">
+<!--    all tags must be closed. "/"-->
+    <label for="name-field">Movie Title</label>
+    <br>
+    <input class="form-control" id="name-field" type="text" name="movieName" />
+<!--    value attribute in submit attribute customizes the button-->
+    <br>
+    <br>
+    Release Year
+    <br>
+    <input type="int" name="year" value="0000"/>
+    <br>
+    <br>
+    Genre
+    <br>
+<!--    select and options for a drop down menu-->
+    <select name="genre">
+        <option value="Action">Action</option>
+        <option value="Adventure">Adventure</option>
+        <option value="Anime">Anime</option>
+        <option value="Biographical">Biographical</option>
+        <option value="Buddy">Buddy</option>
+        <option value="Chick Flick">Chick Flick</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Crime">Crime</option>
+        <option value="Dark Comedy">Dark Comedy</option>
+        <option value="Disaster">Disaster</option>
+        <option value="Documentary">Documentary</option>
+        <option value="Drama">Drama</option>
+        <option value="Epic">Epic</option>
+        <option value="Exploitation">Exploitation</option>
+        <option value="Family">Family</option>
+        <option value="Fantasy">Fantasy</option>
+        <option value="Gangster">Gangster</option>
+        <option value="Heist">Heist</option>
+        <option value="Horror">Horror</option>
+        <option value="Legal Drama">Legal Drama</option>
+        <option value="Martial Arts">Martial Arts</option>
+        <option value="Mockumentary">Mockumentary</option>
+        <option value="Musical">Musical</option>
+        <option value="Mystery">Mystery</option>
+        <option value="Noir">Noir</option>
+        <option value="Parody">Parody</option>
+
+        <option value="Psychological Thriller">Psychological Thriller</option>
+        <option value="Romance">Romance</option>
+        <option value="RomCom">RomCom</option>
+        <option value="SciFi">SciFi</option>
+        <option value="Silent">Silent Film</option>
+        <option value="Slasher">Slasher</option>
+        <option value="Sports">Sports</option>
+        <option value="Spy">Spy</option>
+        <option value="Superhero">Superhero</option>
+        <option value="Swashbuckler">Swashbuckler</option>
+        <option value="Teen">Teen</option>
+        <option value="Thriller">Thriller</option>
+        <option value="War">War</option>
+        <option value="Western">Western</option>
+    </select>
+    <br>
+    <br>
+    Director
+    <br>
+    <input type="text" name="director" value="Unknown" />
+    <br>
+    <br>
+    If this movie is part of a Franchise, enter the Franchise name.
+    <br>
+    <input type="text" name="franchise" value="Unknown" />
+    <br>
+    <br>
+    Movie Rating.
+    <br>
+    <select name="rating">
+        <option value="G">Rated G</option>
+        <option value="PG">Rated PG</option>
+        <option value="PG-13">Rated PG-13</option>
+        <option value="R">Rated R</option>
+        <option value="NC-17">Rated NC-17</option>
+        <option value="NR">Not Rated</option>
+    </select>
+    <br>
+    <br>
+    How important is this to you?
+    <br>
+    <select name="importance">
+        <option value="Extremely Important">Extremely Important</option>
+        <option value="Super Important">Super Important</option>
+        <option value="Very Important">Very Important</option>
+        <option value="Important">Important</option>
+        <option value="Not Urgent">Not Urgent</option>
+        <option value="It Can Wait">It Can Wait</option>
+        <option value="Kinda Want To See It">Kinda Want To See It</option>
+        <option value="Meh">Meh</option>
+    </select>
+    <br>
+    <br>
+
+
+    <input class="myButton" type="submit" value="Add To Movie List" />
+</form>
+</body>
+</html>
