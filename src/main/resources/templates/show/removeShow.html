@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+
+</head>
+<body class="container">
+
+<hr/>
+<hr/>
+<article>
+    <br/>
+    <big><h1 th:text="${title}">Default Title</h1></big>
+    <br/>
+</article>
+<hr/>
+<hr/>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<p class="noShows" th:unless="${shows} and ${shows.size()}">No Television shows in the List</p>
+
+<h2>BecFlix Titles:</h2>
+
+<form method="post">
+
+    <div th:each="show : ${shows}" class="checkbox">
+        <input type="checkbox" name="showIds" th:value="${show.showId}" th:id="${show.showId}"/>
+        <label th:for="${show.showName}" th:text="${show.showName}"></label>
+        <br/>
+    </div>
+    <input type="submit" value="Remove Show(s)"/>
+</form>
+
+</body>
+</html>
