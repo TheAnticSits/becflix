@@ -21,12 +21,11 @@ public class ShowController {
 
     @GetMapping("addShow")
     public String displayAddShowForm(Model model){
-
         model.addAttribute("title", "Add Show");
         return "show/addShow";
     }
 
-    @GetMapping("addShow")
+    @PostMapping(value="addShow")
     public String processAddShowForm(@ModelAttribute Show newShow){
         ShowData.add(newShow);
         return "redirect:";
