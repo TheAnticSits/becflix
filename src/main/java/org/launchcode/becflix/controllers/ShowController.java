@@ -5,39 +5,30 @@ import org.launchcode.becflix.data.ShowData;
 import org.launchcode.becflix.models.Show;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping(value="show")
+@RequestMapping("show")
 public class ShowController {
 
-    @RequestMapping(value = "")
-    public String index(Model model){
+    @GetMapping
+    public String displayAllShows(Model model){
 
         model.addAttribute("shows", ShowData.getAll());
-
         model.addAttribute("title", "BecFlix");
         return "show/index";
     }
 
-    @RequestMapping(value="addShow", method = RequestMethod.GET)
+    @GetMapping("addShow")
     public String displayAddShowForm(Model model){
 
         model.addAttribute("title", "Add Show");
         return "show/addShow";
     }
 
-    @RequestMapping(value="addShow", method = RequestMethod.POST)
-    public String processAddShowForm(@RequestParam int showId, @RequestParam String showName, @RequestParam int year, @RequestParam String genre, @RequestParam String importance){
-        String noEntry = "No Entry";
-        String noInt = "";
-
-
-        Show newShow = new Show(showName, year, genre,  importance);
-// this may be totally screwed up
-        ShowData.getById(showId);
+    @GetMapping("addShow")
+    public String processAddShowForm(@ModelAttribute Show newShow){
+        ShowData.add(newShow);
         return "redirect:";
     }
 

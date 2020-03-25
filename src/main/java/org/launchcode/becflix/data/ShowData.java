@@ -19,7 +19,7 @@ public class ShowData {
         return shows.get(id);
     }
 
-    private static void  add(Show show){
+    public static void  add(Show show){
         shows.put(show.getShowId(), show);
     }
 
