@@ -1,3 +1,4 @@
+
 package org.launchcode.becflix.data;
 
 import org.launchcode.becflix.models.Show;
@@ -18,9 +19,9 @@ public class ShowData {
         return shows.get(id);
     }
 
-    /*private static void  add(Show show){
-        shows.put(show.getId(), show);
-    }*/
+    private static void  add(Show show){
+        shows.put(show.getShowId(), show);
+    }
 
     public static void remove(int id){
         shows.remove(id);
