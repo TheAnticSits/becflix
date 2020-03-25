@@ -32,19 +32,20 @@ public class ShowController {
         return "redirect:";
     }
 
-    @RequestMapping(value = "removeShow", method = RequestMethod.GET)
+    @GetMapping("removeShow")
     public String displayRemoveShowForm(Model model){
         model.addAttribute("shows", ShowData.getAll());
         model.addAttribute("title", "Remove show(s)");
         return "show/removeShow";
     }
 
-    @RequestMapping(value = "removeShow", method = RequestMethod.POST)
-    public String processRemoveShowForm(@RequestParam int[] showIds){
+    @PostMapping(value = "removeShow")
+    public String processRemoveShowForm(@RequestParam (required = false) int[] showIds){
 
-        for(int showId : showIds){
-
-            ShowData.remove(showId);
+        if(showIds != null){
+            for (int id : showIds){
+                ShowData.remove(id);
+            }
         }
         return "redirect:";
     }
