@@ -20,7 +20,7 @@ public class BecController {
         model.addAttribute("movies", MovieData.getAll());
 
         model.addAttribute("title", "BecFlix");
-        return "movie/index";
+        return "/becflix/homepage";
     }
 
 }
