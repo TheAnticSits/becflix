@@ -23,16 +23,16 @@
 
 <form method="post">
 
-    <div th:block th:each="show : ${shows}">
+    <th:block th:block th:each="show : ${shows}">
         <div class="form-group">
             <label>
                 <span th:text="${show.name}"></span>
-                <input type="checkbox" name="showIds" th:value="${show.id}" class="form-control">
+                <input type="checkbox" name="showIds" th:value="${show.showId}" class="form-control"/>
             </label>
         </div>
 
-    </div>
-    <input type="submit", value="Delete" class="btn btn-danger">
+    </th:block>
+    <input type="submit", value="Delete"/>
 
 </form>
 
