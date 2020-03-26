@@ -23,13 +23,34 @@
 
 <form method="post">
 
-    <div th:each="show : ${shows}" class="checkbox">
-        <input type="checkbox" name="showIds" th:value="${show.showId}" th:id="${show.showId}"/>
-        <label th:for="${show.name}" th:text="${show.name}"></label>
-        <br/>
+    <div th:block th:each="show : ${shows}">
+        <div class="form-group">
+            <label>
+                <span th:text="${show.name}"></span>
+                <input type="checkbox" name="showIds" th:value="${show.id}" class="form-control">
+            </label>
+        </div>
+
     </div>
-    <input type="submit" value="Remove Show(s)"/>
+    <input type="submit", value="Delete" class="btn btn-danger">
+
 </form>
+
+<!--<form method="post">
+
+
+    <th:block th:each="event : ${events}">
+        <div class="form-group">
+            <label>
+                <span th:text="${event.name}"></span>
+                <input type="checkbox" name="eventIds" th:value="${event.id}" class="form-control">
+            </label>
+        </div>
+    </th:block>
+
+
+    <input type="submit", value="Delete" class="btn btn-danger">
+</form>-->
 
 </body>
 </html>
