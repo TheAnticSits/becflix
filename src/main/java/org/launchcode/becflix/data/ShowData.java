@@ -20,10 +20,12 @@ public class ShowData {
     }
 
     public static void  add(Show show){
+
         shows.put(show.getShowId(), show);
     }
 
     public static void remove(int id){
+
         shows.remove(id);
     }
 }

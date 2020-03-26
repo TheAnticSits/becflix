@@ -40,9 +40,9 @@ syntax highlighting and error reporting.  Tells intellij that this should confor
     </tr>
 <hr/>
     <tr th:each="show : ${shows}">
-        <td class="showTitles" th:text="${show.name}"></td>
+        <td th:text="${show.name}"></td>
         <td>||</td>
-        <td class="showImportance" th:text="${show.importance}"></td>
+        <td th:text="${show.importance}"></td>
         <td>||</td>
         <td th:text="${show.year}"></td>
         <td>||</td>
