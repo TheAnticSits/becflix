@@ -60,3 +60,17 @@ font-size: 30px;
     font-weight: bold;
     font-size: 30px;
 }
+
+.moviebutton {
+    float: left;
+    font-size: 40px;
+    height: 200px;
+    width: 600px;
+}
+
+.tvbutton {
+    float: right;
+    font-size: 40px;
+    height: 200px;
+    width: 600px;
+}
