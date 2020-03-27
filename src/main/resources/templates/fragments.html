@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<nav class="navigation" th:fragment="navigation">
+<nav class="navigation" th:fragment="navMovie">
     <a href="/">Home Page</a>
     <p th:unless="${shows} and ${shows.size()}">
     <br>
@@ -21,6 +21,8 @@
     <a href="/movie/addMovie">Add A Movie To My List</a> <br>
         <a href="/movie/removeMovie">Remove Some Movies</a>
     </p>
+</nav>
+<nav class="navigation" th:fragment="navShow">
     <br>
     <br>
     <p th:unless="${movies} and ${movies.size()}">
