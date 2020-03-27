@@ -39,6 +39,8 @@ font-size: 30px;
 }
 
 .myButton {
+    font-weight: bold;
+    font-size: 30px;
      height: 100px;
      width: 400px;
 }
