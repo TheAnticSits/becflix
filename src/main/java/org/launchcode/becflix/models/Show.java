@@ -29,10 +29,6 @@ public class Show {
         return showId;
     }
 
-    public void setShowId(int showId) {
-        this.showId = showId;
-    }
-
     public String getName() {
         return name;
     }
