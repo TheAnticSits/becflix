@@ -13,6 +13,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("user")
 public class UserController {
 
+    @GetMapping
+    public String displayNewUser(Model model){
+        model.addAttribute("users", UserData.getAll());
+        model.addAttribute("title", "BecFlix");
+        return "user/index";
+    }
+
 
     @GetMapping("addUser")
     public String displayAddUserForm(Model model){
