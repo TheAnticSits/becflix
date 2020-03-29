@@ -1,8 +1,11 @@
 package org.launchcode.becflix.controllers;
 
+import org.launchcode.becflix.models.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -10,10 +13,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UserController {
 
 
-    @GetMapping
-    public String index(Model model){
-        model.addAttribute("title", "BecFlix");
-        return "index";
+    @GetMapping("addUser")
+    public String displayAddUserForm(Model model){
+        return "user/addUser";
+    }
+
+    @PostMapping(value="addUser")
+    public String processAddUserForm(@ModelAttribute User newUser){
+//        UserData.add(newUser);
+        return "redirect:";
     }
 
 
