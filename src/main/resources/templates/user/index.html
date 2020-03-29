@@ -16,7 +16,27 @@
 <!--adding navigation from fragments.-->
 <nav th:replace="fragments :: navShow"></nav>
 
+<h2>New User:</h2>
 
+<table class="table">
+
+    <tr>
+        <th>User</th>
+        <th>||</th>
+        <th>Email</th>
+        <th>||</th>
+    </tr>
+    <hr/>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.username}"></td>
+        <td>||</td>
+        <td th:text="${user.email}"></td>
+        <td>||</td>
+
+    </tr>
+</table>
+</br>
+</br>
 
 </body>
 </html>

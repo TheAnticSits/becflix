@@ -1,5 +1,6 @@
 package org.launchcode.becflix.controllers;
 
+import org.launchcode.becflix.data.UserData;
 import org.launchcode.becflix.models.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,12 +16,13 @@ public class UserController {
 
     @GetMapping("addUser")
     public String displayAddUserForm(Model model){
+        model.addAttribute("title", "Add User");
         return "user/addUser";
     }
 
     @PostMapping(value="addUser")
     public String processAddUserForm(@ModelAttribute User newUser){
-//        UserData.add(newUser);
+        UserData.add(newUser);
         return "redirect:";
     }
 
