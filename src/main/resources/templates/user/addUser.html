@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
-    <meta charset="UTF-8"/>
-    <title></title>
+    <head th:replace="fragments :: head"></head>
 </head>
 <body>
 <hr/>
 <hr/>
 <article>
     <br/>
-    <big><h1 th:text="${title}">Default Title</h1></big>
+    <big><h1>BecFlix New User</h1></big>
     <br/>
 </article>
 <hr/>
@@ -34,6 +33,9 @@
     Password
     <br>
     <input type="password" name="password" />
+    <br>
+    <br>
+    <br>
     <input class="myButton" type="submit" value="Add User" />
 </form>
 </body>
