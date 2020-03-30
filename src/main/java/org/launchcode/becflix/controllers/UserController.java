@@ -33,13 +33,18 @@ public class UserController {
         return "redirect:";
     }
 
-    @GetMapping(value="login")
+    @GetMapping("login")
     public String displayLoginForm(Model model){
         model.addAttribute("title", "Login");
         return "user/login";
     }
 
-    @PostMapping(value="logout")
+    @PostMapping(value="login")
+    public String processLoginForm(){
+        return "user/login";
+    }
+
+    @GetMapping(value="logout")
     public String displayLogoutForm(@ModelAttribute User newUser){
         UserData.add(newUser);
         return "redirect:";
