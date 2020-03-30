@@ -6,12 +6,14 @@ public class User {
     private String username;
     private String email;
     private String password;
+    private String verifyPass;
     private static int nextId = 1;
 
-    public User(String username, String email, String password){
+    public User(String username, String email, String password, String verifyPass){
         this.username = username;
         this.email = email;
         this.password = password;
+        this.verifyPass = verifyPass;
     }
 
     public User(){
@@ -41,6 +43,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getVerifyPass() {
+        return verifyPass;
+    }
+
+    public void setVerifyPass(String verifyPass) {
+        this.verifyPass = verifyPass;
     }
 
     public int getUserId() {
