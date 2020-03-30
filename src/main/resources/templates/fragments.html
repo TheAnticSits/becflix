@@ -14,6 +14,7 @@
 
 </head>
 <body>
+
 <nav class="navigation" th:fragment="navMovie">
 
     <p th:unless="${shows} and ${shows.size()}">
@@ -22,7 +23,8 @@
     <a href="/movie">List of Movies</a> <br>
     <a href="/movie/addMovie">Add A Movie To My List</a> <br>
         <a href="/movie/removeMovie">Remove Some Movies</a><br><br>
-        <a href="/">Home Page</a>
+        <a href="/">Home Page</a><br>
+        <a href="/user">List of Users</a>
     </p>
 </nav>
 <nav class="navigation" th:fragment="navShow">
@@ -32,7 +34,8 @@
     <a href="/show">List of Television Shows</a> <br>
     <a href="/show/addShow">Add A TV Show To My List</a> <br>
         <a href="/show/removeShow">Remove Some Shows</a> <br><br>
-        <a href="/">Home Page</a>
+        <a href="/">Home Page</a><br>
+        <a href="/user">List of Users</a>
     </p>
 </nav>
 
