@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
     @GetMapping
-    public String displayNewUser(Model model){
+    public String displayNewUser(Model model) {
         model.addAttribute("users", UserData.getAll());
         model.addAttribute("title", "BecFlix");
         return "user/index";
@@ -19,16 +19,18 @@ public class UserController {
 
 
     @GetMapping("addUser")
-    public String displayAddUserForm(Model model){
+    public String displayAddUserForm(Model model) {
         model.addAttribute("title", "Add User");
         return "user/addUser";
     }
 
-    @PostMapping(value="addUser")
-    public String processAddUserForm(@ModelAttribute User newUser){
-        System.out.println(newUser.getPassword());
-        System.out.println(newUser.getVerifyPass());
-        UserData.add(newUser);
+    @PostMapping(value = "addUser")
+    public String processAddUserForm(@ModelAttribute User newUser) {
+
+        if (newUser.getPassword().equals(newUser.getVerifyPass())) {
+            UserData.add(newUser);
+            return "redirect:";
+        }
         return "redirect:";
     }
 
