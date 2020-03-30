@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <head th:replace="fragments :: head"></head>
+</head>
+<body>
+<hr/>
+<hr/>
+<article>
+    <br/>
+    <big><h1>BecFlix Login</h1></big>
+    <br/>
+</article>
+<hr/>
+<hr/>
+<!--adding navigation from fragments.-->
+<a href="/">Home Page</a>
+
+<h2>Add New User</h2>
+<form method="post" style="max-width:600px;">
+    <!--    all tags must be closed. "/"-->
+    <label for="name-field">User Name</label>
+    <br>
+    <input class="form-control" id="name-field" type="text" name="username" />
+    <!--    value attribute in submit attribute customizes the button-->
+    <br>
+    <br>
+    Email
+    <br>
+    <input type="email" name="email">
+    <br>
+    <br>
+    Password
+    <br>
+    <input type="password" name="password" />
+    <br>
+    <br>
+    <br>
+    <input class="myButton" type="submit" value="Login" />
+</form>
+</body>
+</html>
