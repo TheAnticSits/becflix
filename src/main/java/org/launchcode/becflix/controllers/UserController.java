@@ -33,10 +33,10 @@ public class UserController {
         return "redirect:";
     }
 
-    @GetMapping("login")
+    @GetMapping(value="login")
     public String displayLoginForm(Model model){
         model.addAttribute("title", "Login");
-        return "/";
+        return "user/login";
     }
 
     @PostMapping(value="logout")
