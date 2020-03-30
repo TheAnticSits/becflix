@@ -27,6 +27,7 @@ public class UserController {
     @PostMapping(value="addUser")
     public String processAddUserForm(@ModelAttribute User newUser){
         System.out.println(newUser.getPassword());
+        System.out.println(newUser.getVerifyPass());
         UserData.add(newUser);
         return "redirect:";
     }
