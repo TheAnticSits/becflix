@@ -26,7 +26,7 @@ public class UserController {
 
     @PostMapping(value = "addUser")
     public String processAddUserForm(@ModelAttribute User newUser) {
-        if (newUser.getUsername().isEmpty()) {
+        if (newUser.getUsername().isEmpty() || (newUser.getUsername().length() < 5)) {
             return "user/addUser";
         } else if (newUser.getPassword().isEmpty()) {
             return "user/addUser";
