@@ -36,8 +36,8 @@ public class UserController {
             return "user/addUser";
         } else {
             UserData.add(newUser);
+            return "redirect:";
         }
-        return "user/index";
     }
     @GetMapping("login")
     public String displayLoginForm(Model model){
