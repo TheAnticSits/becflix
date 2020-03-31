@@ -35,8 +35,14 @@ public class UserController {
         } else if (newUser.getEmail().isEmpty()) {
             return "user/addUser";
         } else {
-            UserData.add(newUser);
-            return "redirect:";
+            if (newUser.getPassword().equals((newUser.getVerifyPass()))){
+                UserData.add(newUser);
+                return "redirect:";
+            }
+            else{
+                return "user/addUser";
+            }
+
         }
     }
     @GetMapping("login")
