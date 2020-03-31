@@ -26,14 +26,19 @@ public class UserController {
 
     @PostMapping(value = "addUser")
     public String processAddUserForm(@ModelAttribute User newUser) {
-
-        if (newUser.getPassword().equals(newUser.getVerifyPass())) {
+        if (newUser.getUsername().isEmpty()) {
+            return "user/addUser";
+        } else if (newUser.getPassword().isEmpty()) {
+            return "user/addUser";
+        } else if (newUser.getVerifyPass().isEmpty()) {
+            return "user/addUser";
+        } else if (newUser.getEmail().isEmpty()) {
+            return "user/addUser";
+        } else {
             UserData.add(newUser);
-            return "redirect:";
         }
-        return "redirect:";
+        return "user/index";
     }
-
     @GetMapping("login")
     public String displayLoginForm(Model model){
         model.addAttribute("title", "Login");
