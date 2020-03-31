@@ -53,7 +53,7 @@ public class UserController {
 
     @PostMapping(value="login")
     public String processLoginForm(){
-        return "user/login";
+        return "redirect:";
     }
 
     @GetMapping(value="logout")
