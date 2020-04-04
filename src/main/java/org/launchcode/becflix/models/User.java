@@ -14,7 +14,7 @@ public class User {
     private String username;
 
     @Email(message = "Invalid Email.  Try again.")
-    @NotBlank
+    @NotBlank(message = "Must Enter a Valid Email!")
     private String email;
 
     @NotBlank
