@@ -23,18 +23,18 @@
     <label for="name-field">User Name</label>
     <br>
     <input class="form-control" id="name-field" th:field="${user.username}" />
-
+    <p class="error" th:errors="${user.username}"></p>
     <!--    value attribute in submit attribute customizes the button-->
     <br>
     <br>
     Email
     <br>
     <input th:field="${user.email}" />
-
+    <p class="error" th:errors="${user.email}"></p>
     <br>
     <br>
     Password:<input type="password" th:field="${user.password}" />
-
+    <p class="error" th:errors="${user.password}"></p>
     <br>
     Verify Password:<input type="password" name="verifyPass" />
     <br>
