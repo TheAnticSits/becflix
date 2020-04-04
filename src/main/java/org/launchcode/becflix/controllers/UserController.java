@@ -5,6 +5,7 @@ import org.launchcode.becflix.data.UserData;
 import org.launchcode.becflix.models.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -28,7 +29,7 @@ public class UserController {
     }
 
     @PostMapping(value = "addUser")
-    public String processAddUserForm(@ModelAttribute @Valid User newUser) {
+    public String processAddUserForm(@ModelAttribute @Valid User newUser, Errors errors, Model model) {
         /*if (newUser.getUsername().isEmpty() || (newUser.getUsername().length() < 5) || (newUser.getUsername().length() > 15)) {
             return "user/addUser";
         } else if (newUser.getPassword().isEmpty() || (newUser.getPassword().length() < 5 || (newUser.getPassword().length() > 15))) {
@@ -38,6 +39,10 @@ public class UserController {
         } else if (newUser.getEmail().isEmpty()) {
             return "user/addUser";
         } else {*/
+        if(errors.hasErrors()){
+            model.addAttribute("title", "New User");
+            return "user/addUser";
+        } else {
             if (newUser.getPassword().equals((newUser.getVerifyPass()))){
                 UserData.add(newUser);
                 return "redirect:";
@@ -47,7 +52,7 @@ public class UserController {
             }
 
         }
-//    }
+    }
     @GetMapping("login")
     public String displayLoginForm(Model model){
         model.addAttribute("title", "Login");
