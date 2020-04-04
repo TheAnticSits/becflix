@@ -17,6 +17,7 @@
 <a href="/">Home Page</a>
 
 <h2>Add New User</h2>
+    <p th:text="${errorMsg}" style="color:red;"></p>
 <form method="post" style="max-width:600px;">
     <!--    all tags must be closed. "/"-->
     <label for="name-field">User Name</label>

@@ -41,6 +41,7 @@ public class UserController {
         } else {*/
         if(errors.hasErrors()){
             model.addAttribute("title", "New User");
+            model.addAttribute("errorMsg", "Bad Data!");
             return "user/addUser";
         } else {
             if (newUser.getPassword().equals((newUser.getVerifyPass()))){
