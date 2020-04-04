@@ -24,14 +24,14 @@
         <th>User</th>
         <th>||</th>
         <th>Email</th>
-        <th>||</th>
+
     </tr>
     <hr/>
     <tr th:each="user : ${users}">
         <td th:text="${user.username}"></td>
         <td>||</td>
         <td th:text="${user.email}"></td>
-        <td>||</td>
+
 
     </tr>
 </table>
