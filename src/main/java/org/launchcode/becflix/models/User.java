@@ -10,17 +10,17 @@ public class User {
     private static int nextId = 1;
 
     @NotBlank
-    @Size(min = 3, max = 15)
+    @Size(min = 3, max = 15, message = "Username must be between 3 to 15 Characters.")
     private String username;
 
-    @Email
+    @Email(message = "Invalid Email.  Try again.")
     @NotBlank
     private String email;
 
     @NotBlank
     @Size(min = 5, max = 15, message = "Password Must Be Between 5 to 15 Characters.")
     private String password;
-    
+
     private String verifyPass;
 
 
