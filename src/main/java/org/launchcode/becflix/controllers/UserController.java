@@ -1,11 +1,13 @@
 package org.launchcode.becflix.controllers;
 
-import com.sun.xml.internal.bind.v2.TODO;
+
 import org.launchcode.becflix.data.UserData;
 import org.launchcode.becflix.models.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @Controller
 @RequestMapping("user")
@@ -26,8 +28,8 @@ public class UserController {
     }
 
     @PostMapping(value = "addUser")
-    public String processAddUserForm(@ModelAttribute User newUser) {
-        if (newUser.getUsername().isEmpty() || (newUser.getUsername().length() < 5) || (newUser.getUsername().length() > 15)) {
+    public String processAddUserForm(@ModelAttribute @Valid User newUser) {
+        /*if (newUser.getUsername().isEmpty() || (newUser.getUsername().length() < 5) || (newUser.getUsername().length() > 15)) {
             return "user/addUser";
         } else if (newUser.getPassword().isEmpty() || (newUser.getPassword().length() < 5 || (newUser.getPassword().length() > 15))) {
             return "user/addUser";
@@ -35,7 +37,7 @@ public class UserController {
             return "user/addUser";
         } else if (newUser.getEmail().isEmpty()) {
             return "user/addUser";
-        } else {
+        } else {*/
             if (newUser.getPassword().equals((newUser.getVerifyPass()))){
                 UserData.add(newUser);
                 return "redirect:";
@@ -45,7 +47,7 @@ public class UserController {
             }
 
         }
-    }
+//    }
     @GetMapping("login")
     public String displayLoginForm(Model model){
         model.addAttribute("title", "Login");
