@@ -31,18 +31,9 @@ public class UserController {
 
     @PostMapping(value = "addUser")
     public String processAddUserForm(@ModelAttribute @Valid User newUser, Errors errors, Model model) {
-        /*if (newUser.getUsername().isEmpty() || (newUser.getUsername().length() < 5) || (newUser.getUsername().length() > 15)) {
-            return "user/addUser";
-        } else if (newUser.getPassword().isEmpty() || (newUser.getPassword().length() < 5 || (newUser.getPassword().length() > 15))) {
-            return "user/addUser";
-        } else if (newUser.getVerifyPass().isEmpty()) {
-            return "user/addUser";
-        } else if (newUser.getEmail().isEmpty()) {
-            return "user/addUser";
-        } else {*/
         if(errors.hasErrors()){
             model.addAttribute("title", "New User");
-            model.addAttribute("errorMsg", "Bad Data!");
+
             return "user/addUser";
         } else {
             if (newUser.getPassword().equals((newUser.getVerifyPass()))){
