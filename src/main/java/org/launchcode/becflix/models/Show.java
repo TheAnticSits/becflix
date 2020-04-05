@@ -1,8 +1,16 @@
 package org.launchcode.becflix.models;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
 public class Show {
+
     private int showId;
+
+    @NotBlank(message = "Must have a TV Show Name.")
+    @Size(min = 1, max = 40)
     private String name;
+
     private int year;
 //    private String actor;
     private String genre;

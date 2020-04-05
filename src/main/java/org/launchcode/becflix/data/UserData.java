@@ -1,6 +1,5 @@
 package org.launchcode.becflix.data;
 
-import org.launchcode.becflix.models.Show;
 import org.launchcode.becflix.models.User;
 
 import java.util.Collection;
