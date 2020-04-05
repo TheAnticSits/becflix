@@ -31,16 +31,16 @@ public class ShowController {
 
     @PostMapping(value="addShow")
     public String processAddShowForm(@ModelAttribute @Valid Show newShow, Errors errors, Model model) {
-/*        if (errors.hasErrors()) {
+        if (errors.hasErrors()) {
             model.addAttribute("title", "New Show");
 
             return "show/addShow";
-        } else {*/
+        } else {
 
             ShowData.add(newShow);
             return "redirect:";
         }
-//    }
+    }
     @GetMapping("removeShow")
     public String displayRemoveShowForm(Model model){
         model.addAttribute("shows", ShowData.getAll());
