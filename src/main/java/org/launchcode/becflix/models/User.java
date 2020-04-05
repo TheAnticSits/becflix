@@ -9,7 +9,7 @@ public class User {
     private int userId;
     private static int nextId = 1;
 
-    @NotBlank
+    @NotBlank(message = "You can't leave this field blank.")
     @Size(min = 3, max = 15, message = "Username must be between 3 to 15 Characters.")
     private String username;
 
@@ -17,7 +17,7 @@ public class User {
     @NotBlank(message = "Must Enter a Valid Email!")
     private String email;
 
-    @NotBlank
+    @NotBlank(message = "You have to create a password.")
     @Size(min = 5, max = 15, message = "Password Must Be Between 5 to 15 Characters.")
     private String password;
 
