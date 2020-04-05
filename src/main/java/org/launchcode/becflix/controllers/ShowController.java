@@ -5,7 +5,10 @@ import org.launchcode.becflix.data.ShowData;
 import org.launchcode.becflix.models.Show;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @Controller
 @RequestMapping("show")
@@ -22,11 +25,12 @@ public class ShowController {
     @GetMapping("addShow")
     public String displayAddShowForm(Model model){
         model.addAttribute("title", "Add Show");
+        model.addAttribute(new Show());
         return "show/addShow";
     }
 
     @PostMapping(value="addShow")
-    public String processAddShowForm(@ModelAttribute Show newShow){
+    public String processAddShowForm(@ModelAttribute @Valid Show newShow, Errors errors, Model model){
         ShowData.add(newShow);
         return "redirect:";
     }
