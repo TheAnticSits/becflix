@@ -27,19 +27,19 @@ syntax highlighting and error reporting.  Tells intellij that this should confor
 <!--    all tags must be closed. "/"-->
     <label for="name-field">TV Show Title</label>
     <br>
-    <input class="form-control" id="name-field" field="${show.name}" />
+    <input class="form-control" id="name-field" th:field="${show.name}" />
 <!--    value attribute in submit attribute customizes the button-->
     <br>
     <br>
     Year Show Started
     <br>
-    <input type="int" field="${show.year}"/>
+    <input type="int" th:field="${show.year}"/>
     <br>
     <br>
     Genre
     <br>
 <!--    select and options for a drop down menu-->
-    <select name="genre" field="${show.genre}">
+    <select name="genre" type="text" th:field="${show.genre}">
         <option value="Action">Action</option>
         <option value="Adventure">Adventure</option>
         <option value="Anime">Anime</option>
@@ -87,7 +87,7 @@ syntax highlighting and error reporting.  Tells intellij that this should confor
 
     How important is this to you?
     <br>
-    <select name="importance" field="${show.importance}">
+    <select name="importance" type="text" th:field="${show.importance}">
         <option value="Extremely Important">Extremely Important</option>
         <option value="Super Important">Super Important</option>
         <option value="Very Important">Very Important</option>
