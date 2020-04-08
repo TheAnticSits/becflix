@@ -52,12 +52,12 @@ public class MovieController {
         return "movie/removeMovie";
     }
 
-    @RequestMapping(value = "removeMovie", method = RequestMethod.POST)
-    public String processRemoveMovieForm(@RequestParam int[] movieIds){
-
-        for(int movieId : movieIds){
-
-            MovieData.remove(movieId);
+    @PostMapping(value = "removeMovie")
+    public String processRemoveMovieForm(@RequestParam (required = false) int[] movieIds){
+        if(movieIds != null){
+            for (int id : movieIds){
+                MovieData.remove(id);
+            }
         }
         return "redirect:";
     }
