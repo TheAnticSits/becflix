@@ -45,7 +45,7 @@ public class MovieController {
         }
     }
 
-    @RequestMapping(value = "removeMovie", method = RequestMethod.GET)
+    @GetMapping("removeMovie")
     public String displayRemoveMovieForm(Model model){
         model.addAttribute("movies", MovieData.getAll());
         model.addAttribute("title", "Remove Movie(s)");
