@@ -5,6 +5,7 @@ import org.launchcode.becflix.models.Movie;
 import org.launchcode.becflix.data.MovieData;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -24,10 +25,11 @@ public class MovieController {
         return "movie/index";
     }
 
-    @RequestMapping(value="addMovie", method = RequestMethod.GET)
+    @GetMapping("addMovie")
     public String displayAddMovieForm(Model model){
 
         model.addAttribute("title", "Add Movie");
+        model.addAttribute(new Movie());
         return "movie/addMovie";
     }
 
