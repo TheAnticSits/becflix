@@ -5,11 +5,10 @@ import org.launchcode.becflix.models.Movie;
 import org.launchcode.becflix.data.MovieData;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.validation.Errors;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 
 
 @Controller
@@ -33,22 +32,17 @@ public class MovieController {
         return "movie/addMovie";
     }
 
-    @RequestMapping(value="addMovie", method = RequestMethod.POST)
-    public String processAddMovieForm(@RequestParam String movieName, @RequestParam int year, @RequestParam String genre, @RequestParam String director, @RequestParam String franchise, @RequestParam String rating, @RequestParam String importance){
-        String noEntry = "No Entry";
-        String noInt = "";
-        if(director == null){
-            director = noEntry;
-        }
-        if(franchise.equals(null)) franchise = noEntry;
-        if(noInt.equals(year)){
-            year = 0;
-        }
+    @PostMapping(value="addMovie")
+    public String processAddMovieForm(@ModelAttribute @Valid Movie newMovie, Errors errors, Model model){
+        if (errors.hasErrors()) {
+            model.addAttribute("title", "New Movie");
 
-        Movie newMovie = new Movie(movieName, year, genre, director, franchise, rating, importance);
+            return "show/addMovie";
+        } else {
 
-        MovieData.add(newMovie);
-        return "redirect:";
+            MovieData.add(newMovie);
+            return "redirect:";
+        }
     }
 
     @RequestMapping(value = "removeMovie", method = RequestMethod.GET)
