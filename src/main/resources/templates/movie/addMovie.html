@@ -95,6 +95,7 @@
     Movie Rating.
     <br>
     <select name="rating" type="text" th:field="${movie.rating}">
+        <option value="Unknown">I don't know</option>
         <option value="G">Rated G</option>
         <option value="PG">Rated PG</option>
         <option value="PG-13">Rated PG-13</option>
@@ -107,6 +108,7 @@
     How important is this to you?
     <br>
     <select name="importance" type="text" th:field="${movie.importance}">
+        <option value="Unsure">I need to figure that out</option>
         <option value="Extremely Important">Extremely Important</option>
         <option value="Super Important">Super Important</option>
         <option value="Very Important">Very Important</option>
