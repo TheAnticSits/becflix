@@ -11,10 +11,16 @@ public class Movie {
     @NotBlank(message = "Must have a TV Show Name.")
     @Size(min = 1, max = 40)
     private String movieName;
+
     private int year;
     private String genre;
+
+    @Size(min = 1, max = 40)
     private String director;
+
+    @Size(min = 1, max = 40)
     private String franchise;
+    
     private String rating;
     private String importance;
 
