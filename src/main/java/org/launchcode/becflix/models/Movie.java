@@ -20,7 +20,7 @@ public class Movie {
 
     @Size(min = 1, max = 40)
     private String franchise;
-    
+
     private String rating;
     private String importance;
 
