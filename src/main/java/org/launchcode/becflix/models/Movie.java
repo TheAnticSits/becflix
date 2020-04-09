@@ -14,11 +14,7 @@ public class Movie {
 
     private int year;
     private String genre;
-
-    @Size(min = 1, max = 40)
     private String director;
-
-    @Size(min = 1, max = 40)
     private String franchise;
 
     private String rating;
