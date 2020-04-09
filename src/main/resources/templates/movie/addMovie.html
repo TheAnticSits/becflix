@@ -24,19 +24,19 @@
 
     <label for="name-field">Movie Title</label>
     <br>
-    <input class="form-control" id="name-field" type="text" name="movieName" />
+    <input class="form-control" id="name-field" th:field="${movie.movieName}"/>
 
     <br>
     <br>
     Release Year
     <br>
-    <input type="int" name="year" value="0000"/>
+    <input type="int" th:field="${movie.year}"/>
     <br>
     <br>
     Genre
     <br>
 
-    <select name="genre">
+    <select name="genre" type="text" th:field="${movie.genre}">
         <option value="Action">Action</option>
         <option value="Adventure">Adventure</option>
         <option value="Anime">Anime</option>
@@ -83,17 +83,17 @@
     <br>
     Director
     <br>
-    <input type="text" name="director" value="Unknown" />
+    <input type="text" th:field="${movie.director}"/>
     <br>
     <br>
     If this movie is part of a Franchise, enter the Franchise name.
     <br>
-    <input type="text" name="franchise" value="Unknown" />
+    <input type="text" th:field="${movie.franchise}" />
     <br>
     <br>
     Movie Rating.
     <br>
-    <select name="rating">
+    <select name="rating" type="text" th:field="${movie.rating}">
         <option value="G">Rated G</option>
         <option value="PG">Rated PG</option>
         <option value="PG-13">Rated PG-13</option>
@@ -105,7 +105,7 @@
     <br>
     How important is this to you?
     <br>
-    <select name="importance">
+    <select name="importance" type="text" th:field="${movie.importance}">
         <option value="Extremely Important">Extremely Important</option>
         <option value="Super Important">Super Important</option>
         <option value="Very Important">Very Important</option>
