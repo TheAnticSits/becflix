@@ -25,7 +25,7 @@
     <label for="name-field">Movie Title</label>
     <br>
     <input class="form-control" id="name-field" th:field="${movie.movieName}"/>
-
+    <p class="error" th:errors="${movie.movieName}"></p>
     <br>
     <br>
     Release Year
