@@ -12,7 +12,9 @@ public class Movie {
     @Size(min = 1, max = 40)
     private String movieName;
 
+
     private int year;
+
     private String genre;
     private String director;
     private String franchise;

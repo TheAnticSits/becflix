@@ -30,7 +30,8 @@
     <br>
     Release Year
     <br>
-    <input name="year" type="int" th:field="${movie.year}" value="0000"/>
+    <input name="year" type="int" th:field="${movie.year}" />
+    <p class="error" th:errors="${movie.year}"></p>
     <br>
     <br>
     Genre
