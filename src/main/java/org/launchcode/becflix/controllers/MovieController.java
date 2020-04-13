@@ -37,7 +37,7 @@ public class MovieController {
         if (errors.hasErrors()) {
             model.addAttribute("title", "New Movie");
 
-            return "show/addMovie";
+            return "movie/addMovie";
         } else {
 
             MovieData.add(newMovie);
