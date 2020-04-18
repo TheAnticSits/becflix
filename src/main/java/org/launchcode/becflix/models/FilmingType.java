@@ -3,7 +3,8 @@ package org.launchcode.becflix.models;
 public enum FilmingType {
 
     ANIMATION("Animation"),
-    LIVEACTION("Live Action");
+    LIVEACTION("Live Action"),
+    COMBINED("Combination of Live and Animation");
 
     private final String displayName;
 

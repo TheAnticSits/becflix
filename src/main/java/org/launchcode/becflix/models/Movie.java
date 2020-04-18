@@ -27,8 +27,9 @@ public class Movie {
 
     private static int nextId = 1;
 
+    private FilmingType type;
 
-    public Movie(String movieName, int year, String genre, String director, String franchise, String rating, String importance) {
+    public Movie(String movieName, int year, String genre, String director, String franchise, String rating, String importance, FilmingType type) {
         this();
 
         this.movieName = movieName;
@@ -38,6 +39,7 @@ public class Movie {
         this.franchise = franchise;
         this.rating = rating;
         this.importance = importance;
+        this.type = type;
     }
 
     public Movie() {
@@ -109,5 +111,11 @@ public class Movie {
         this.importance = importance;
     }
 
+    public FilmingType getType() {
+        return type;
+    }
 
+    public void setType(FilmingType type) {
+        this.type = type;
+    }
 }
