@@ -30,7 +30,7 @@ public class MovieController {
 
         model.addAttribute("title", "Add Movie");
         model.addAttribute(new Movie());
-        model.addAttribute(FilmingType.values());
+        model.addAttribute("types", FilmingType.values());
         return "movie/addMovie";
     }
 

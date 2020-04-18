@@ -43,6 +43,8 @@ syntax highlighting and error reporting.  Tells intellij that this should confor
         <th>Rating</th>
         <th>||</th>
         <th>Franchise</th>
+        <th>||</th>
+        <th>Type of Film</th>
     </tr>
 <hr/>
     <tr th:each="movie : ${movies}">
@@ -59,6 +61,8 @@ syntax highlighting and error reporting.  Tells intellij that this should confor
         <td th:text="${movie.rating}"></td>
         <td>||</td>
         <td th:text="${movie.franchise}"></td>
+        <td>||</td>
+        <td th:text="${movie.type.displayName}"></td>
     </tr>
 </table>
 </br>
