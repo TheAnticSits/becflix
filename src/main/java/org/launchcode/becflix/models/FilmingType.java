@@ -4,7 +4,7 @@ public enum FilmingType {
 
     ANIMATION("Animation"),
     LIVEACTION("Live Action"),
-    COMBINED("Combination of Live and Animation");
+    CROSSOVER("Combination of Live and Animation");
 
     private final String displayName;
 

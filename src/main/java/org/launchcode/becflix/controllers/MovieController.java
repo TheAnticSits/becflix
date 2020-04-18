@@ -1,6 +1,7 @@
 
 package org.launchcode.becflix.controllers;
 
+import org.launchcode.becflix.models.FilmingType;
 import org.launchcode.becflix.models.Movie;
 import org.launchcode.becflix.data.MovieData;
 import org.springframework.stereotype.Controller;
@@ -29,6 +30,7 @@ public class MovieController {
 
         model.addAttribute("title", "Add Movie");
         model.addAttribute(new Movie());
+        model.addAttribute(FilmingType.values());
         return "movie/addMovie";
     }
 
