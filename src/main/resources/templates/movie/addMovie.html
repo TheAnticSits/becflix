@@ -121,7 +121,16 @@
     </select>
     <br>
     <br>
-
+    <div class="form-group">
+        <label>Live Action or Animation?
+        <select th:field="${movie.type}">
+            <option th:each="type : ${types}"
+                th:value="${type}"
+                    th:text="${type.displayName}"
+            ></option>
+        </select>
+        </label>
+    </div>
 
     <input class="myButton" type="submit" value="Add To Movie List" />
 </form>
