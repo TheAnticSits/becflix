@@ -1,8 +1,10 @@
 
 package org.launchcode.becflix.models;
 
+import org.hibernate.validator.constraints.Range;
+
+
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 public class Movie {
@@ -13,7 +15,7 @@ public class Movie {
     @Size(min = 1, max = 40)
     private String movieName;
 
-    @NotNull(message = "Must enter the year it began.")
+    @Range(min = 1, message = "Must enter the year it began.")
     private int year;
 
     private String genre;
