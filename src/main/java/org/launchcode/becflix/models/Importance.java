@@ -15,13 +15,13 @@ public enum Importance {
     KINDAWANTTOSEEIT("Kinda Want To See It"),
     MEH("Meh");
 
-    private final String importanceRank;
+    private final String displayImportance;
 
-    Importance(String importanceRank) {
-        this.importanceRank = importanceRank;
+    Importance(String displayImportance) {
+        this.displayImportance = displayImportance;
     }
 
-    public String getImportanceRank() {
-        return importanceRank;
+    public String getDisplayImportance() {
+        return displayImportance;
     }
 }
