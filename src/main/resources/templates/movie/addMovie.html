@@ -121,6 +121,18 @@
     </select>
     <br>
     <br>
+    Month -- Day -- Year
+    <br>
+    <select name="month" type="text">
+        <option value="January">January</option>
+    </select>
+    <select name="day" type="int">
+        <option value="1">1</option>
+    </select>
+    <input name="year" type="int" th:field="${movie.year}" />
+
+    <br>
+    <br>
     <div class="form-group">
         <label>Live Action or Animation?
         <select th:field="${movie.type}">
