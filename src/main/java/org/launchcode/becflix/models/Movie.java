@@ -6,6 +6,7 @@ import org.hibernate.validator.constraints.Range;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import java.util.Date;
 
 public class Movie {
 
@@ -18,6 +19,7 @@ public class Movie {
     @Range(min = 1, message = "Must enter the year it began.")
     private int year;
 
+    private Date date;
     private String genre;
     private String director;
     private String franchise;
@@ -29,11 +31,12 @@ public class Movie {
 
     private FilmingType type;
 
-    public Movie(String movieName, int year, String genre, String director, String franchise, String rating, String importance, FilmingType type) {
+    public Movie(String movieName, int year, Date date, String genre, String director, String franchise, String rating, String importance, FilmingType type) {
         this();
 
         this.movieName = movieName;
         this.year = year;
+        this.date = date;
         this.genre = genre;
         this.director = director;
         this.franchise = franchise;
@@ -69,6 +72,14 @@ public class Movie {
 
     public void setYear(int year) {
         this.year = year;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     public String getGenre() {
