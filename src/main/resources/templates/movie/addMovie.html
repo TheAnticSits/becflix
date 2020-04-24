@@ -37,7 +37,8 @@
     Release Date<br>
     Month - Day - Year
     <br>
-    <input name="releaseDate" type="date" th:value="${movie.releaseDate}">
+<!--    <input name="releaseDate" type="date" th:value="${movie.releaseDate}">-->
+    <input name="releaseDate" type="date" pattern="MM-dd-YYYY" th:value="${movie.releaseDate}" />
     <br>
     Genre
     <br>

@@ -2,6 +2,7 @@
 package org.launchcode.becflix.models;
 
 import org.hibernate.validator.constraints.Range;
+import org.springframework.format.annotation.DateTimeFormat;
 
 
 import javax.validation.constraints.NotBlank;
@@ -74,6 +75,7 @@ public class Movie {
         this.year = year;
     }
 
+    @DateTimeFormat(pattern="MM-dd-YYYY")
     public Date getReleaseDate() {
         return releaseDate;
     }

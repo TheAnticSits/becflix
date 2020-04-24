@@ -36,16 +36,18 @@ public class MovieController {
 
     @PostMapping(value="addMovie")
     public String processAddMovieForm(@ModelAttribute @Valid Movie newMovie, Errors errors, Model model){
+/*
         if (errors.hasErrors()) {
             model.addAttribute("title", "New Movie");
 
             return "movie/addMovie";
         } else {
+*/
 
             MovieData.add(newMovie);
             return "redirect:";
         }
-    }
+//    }
 
     @GetMapping("removeMovie")
     public String displayRemoveMovieForm(Model model){
