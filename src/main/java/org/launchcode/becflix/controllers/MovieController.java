@@ -43,7 +43,7 @@ public class MovieController {
             return "movie/addMovie";
         } else {
 */
-
+            System.out.println(newMovie.getReleaseDate());
             MovieData.add(newMovie);
             return "redirect:";
         }

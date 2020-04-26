@@ -75,7 +75,7 @@ public class Movie {
         this.year = year;
     }
 
-    @DateTimeFormat(pattern="MM-dd-YYYY")
+    @DateTimeFormat(pattern="mm-dd-yyyy")
     public Date getReleaseDate() {
         return releaseDate;
     }
