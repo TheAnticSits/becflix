@@ -20,7 +20,9 @@ public class Movie {
     @Range(min = 1, message = "Must enter the year it began.")
     private int year;
 
+    @DateTimeFormat(pattern="mm-dd-yyyy")
     private Date releaseDate;
+
     private String genre;
     private String director;
     private String franchise;
@@ -80,6 +82,7 @@ public class Movie {
         return releaseDate;
     }
 
+    @DateTimeFormat(pattern="mm-dd-yyyy")
     public void setReleaseDate(Date releaseDate) {
         this.releaseDate = releaseDate;
     }
