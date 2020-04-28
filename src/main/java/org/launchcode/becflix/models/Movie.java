@@ -2,6 +2,7 @@
 package org.launchcode.becflix.models;
 
 import org.hibernate.validator.constraints.Range;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -77,10 +78,12 @@ public class Movie {
     }
 
     public Date getReleaseDate() {
+
         return releaseDate;
     }
 
     public void setReleaseDate(Date releaseDate) {
+
         this.releaseDate = releaseDate;
     }
 
