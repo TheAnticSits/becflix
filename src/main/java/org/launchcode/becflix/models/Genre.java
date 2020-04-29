@@ -47,14 +47,14 @@ public enum Genre {
     WAR("War"),
     WESTERN("Western");
 
-    private final String genre;
+    private final String displayGenre;
 
-    Genre(String genre) {
-        this.genre = genre;
+    Genre(String displayGenre) {
+        this.displayGenre = displayGenre;
     }
 
-    public String getGenre() {
-        return genre;
+    public String getDisplayGenre() {
+        return displayGenre;
     }
 }
 

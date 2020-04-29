@@ -39,6 +39,22 @@
     <br>
     <input name="releaseDate" type="date" th:field="${movie.releaseDate}">
     <br>
+
+<!--
+
+    <div class="form-group">
+        <label>What's the genre
+            <select th:field="${movie.genre}">
+                <option th:each="genre : ${genres}"
+                        th:value="${genre}"
+                        th:text="${genre.displayGenre}"
+                ></option>
+            </select>
+        </label>
+    </div>
+-->
+
+
     Genre
     <br>
 
