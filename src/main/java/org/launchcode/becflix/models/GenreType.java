@@ -1,6 +1,6 @@
 package org.launchcode.becflix.models;
 
-public enum Genre {
+public enum GenreType {
 
     UNKNOWN("I Don't Know"),
     ACTION("Action"),
@@ -49,7 +49,7 @@ public enum Genre {
 
     private final String displayGenre;
 
-    Genre(String displayGenre) {
+    GenreType(String displayGenre) {
         this.displayGenre = displayGenre;
     }
 
