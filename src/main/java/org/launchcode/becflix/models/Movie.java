@@ -2,12 +2,13 @@
 package org.launchcode.becflix.models;
 
 import org.hibernate.validator.constraints.Range;
-import org.springframework.format.annotation.DateTimeFormat;
+
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
 
 public class Movie {
 
@@ -19,7 +20,6 @@ public class Movie {
 
     @Range(min = 1, message = "Must enter the year it began.")
     private int year;
-
 
     private Date releaseDate;
 
