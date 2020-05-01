@@ -5,6 +5,7 @@ import org.launchcode.becflix.models.FilmingType;
 import org.launchcode.becflix.models.GenreType;
 import org.launchcode.becflix.models.Movie;
 import org.launchcode.becflix.data.MovieData;
+import org.launchcode.becflix.models.Rating;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -33,6 +34,7 @@ public class MovieController {
         model.addAttribute(new Movie());
         model.addAttribute("types", FilmingType.values());
         model.addAttribute("genres", GenreType.values());
+        model.addAttribute("ratings", Rating.values());
         return "movie/addMovie";
     }
 

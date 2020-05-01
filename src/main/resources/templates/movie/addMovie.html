@@ -62,7 +62,18 @@
     <br>
     <input type="text" th:field="${movie.franchise}" />
     <br>
-    <br>
+
+    <div class="form-group">
+        <label>What is this movie's rating?<br>
+            <select th:field="${movie.rating}">
+                <option th:each="rating : ${ratings}"
+                        th:value="${rating}"
+                        th:text="${rating.displayRating}"
+                ></option>
+            </select>
+        </label>
+    </div>
+<!--    <br>
     Movie Rating.
     <br>
     <select name="rating" type="text" th:field="${movie.rating}">
@@ -74,7 +85,7 @@
         <option value="NC-17">Rated NC-17</option>
         <option value="NR">Not Rated</option>
     </select>
-    <br>
+    <br>-->
     <br>
     How important is this to you?
     <br>
