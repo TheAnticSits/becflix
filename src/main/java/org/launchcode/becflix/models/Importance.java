@@ -2,10 +2,7 @@ package org.launchcode.becflix.models;
 
 public enum Importance {
 
-
-
-    LIVEACTION("Live Action"),
-    UNSURE("UNSURE"),
+    HAVENTDECIDED("Haven't decided yet"),
     EXTREMELYIMPORTANT("Extremely Important"),
     SUPERIMPORTANT("Super Important"),
     VERYIMPORTANT("Very Important"),
