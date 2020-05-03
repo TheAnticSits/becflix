@@ -29,10 +29,11 @@ public class MovieController {
 
         model.addAttribute("title", "Add Movie");
         model.addAttribute(new Movie());
-        model.addAttribute("types", FilmingType.values());
+
         model.addAttribute("genres", GenreType.values());
         model.addAttribute("ratings", Rating.values());
         model.addAttribute("importances", Importance.values());
+        model.addAttribute("types", Type.values());
         return "movie/addMovie";
     }
 

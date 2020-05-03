@@ -6,7 +6,6 @@ import org.hibernate.validator.constraints.Range;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
@@ -32,9 +31,9 @@ public class Movie {
 
     private static int nextId = 1;
 
-    private FilmingType type;
+    private Type type;
 
-    public Movie(String movieName, int year, Date releaseDate, String genre, String director, String franchise, String rating, String importance, FilmingType type) {
+    public Movie(String movieName, int year, Date releaseDate, String genre, String director, String franchise, String rating, String importance, Type type) {
         this();
 
         this.movieName = movieName;
@@ -127,11 +126,11 @@ public class Movie {
         this.importance = importance;
     }
 
-    public FilmingType getType() {
+    public Type getType() {
         return type;
     }
 
-    public void setType(FilmingType type) {
+    public void setType(Type type) {
         this.type = type;
     }
 }
