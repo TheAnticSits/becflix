@@ -89,13 +89,13 @@
 
     <br>
     <div class="form-group">
-        <label>Live Action or Animation?
-        <select th:field="${movie.type}">
-            <option th:each="type : ${types}"
-                    th:value="${type.displayType}"
-                    th:text="${type.displayType}"
-            ></option>
-        </select>
+        <label>Live Action or Animation?<br>
+            <select th:field="${movie.type}">
+                <option th:each="type : ${types}"
+                        th:value="${type.displayType}"
+                        th:text="${type.displayType}"
+                ></option>
+            </select>
         </label>
     </div>
 

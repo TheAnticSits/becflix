@@ -28,12 +28,12 @@ public class Movie {
 
     private String rating;
     private String importance;
-
+    private String type;
     private static int nextId = 1;
 
-    private Type type;
 
-    public Movie(String movieName, int year, Date releaseDate, String genre, String director, String franchise, String rating, String importance, Type type) {
+
+    public Movie(String movieName, int year, Date releaseDate, String genre, String director, String franchise, String rating, String importance, String type) {
         this();
 
         this.movieName = movieName;
@@ -126,11 +126,11 @@ public class Movie {
         this.importance = importance;
     }
 
-    public Type getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(Type type) {
+    public void setType(String type) {
         this.type = type;
     }
 }

@@ -48,6 +48,7 @@ public class MovieController {
 */
             System.out.println(newMovie.getReleaseDate());
             System.out.println(newMovie.getDirector());
+            System.out.println(newMovie.getType());
             MovieData.add(newMovie);
             return "redirect:";
         }
