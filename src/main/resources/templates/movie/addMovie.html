@@ -45,7 +45,7 @@
         <label>What is the Genre?<br>
             <select th:field="${movie.genre}">
                 <option th:each="genre : ${genres}"
-                        th:value="${genre}"
+                        th:value="${genre.displayGenre}"
                         th:text="${genre.displayGenre}"
                 ></option>
             </select>
@@ -67,7 +67,7 @@
         <label>What is this movie's rating?<br>
             <select th:field="${movie.rating}">
                 <option th:each="rating : ${ratings}"
-                        th:value="${rating}"
+                        th:value="${rating.displayRating}"
                         th:text="${rating.displayRating}"
                 ></option>
             </select>
@@ -80,19 +80,19 @@
         <label>How important is this to you?<br>
             <select th:field="${movie.importance}">
                 <option th:each="importance : ${importances}"
-                        th:value="${importance}"
+                        th:value="${importance.displayImportance}"
                         th:text="${importance.displayImportance}"
                 ></option>
             </select>
         </label>
     </div>
-    
+
     <br>
     <div class="form-group">
         <label>Live Action or Animation?
         <select th:field="${movie.type}">
             <option th:each="type : ${types}"
-                th:value="${type}"
+                th:value="${type.displayName}"
                     th:text="${type.displayName}"
             ></option>
         </select>
