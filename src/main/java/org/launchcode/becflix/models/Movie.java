@@ -20,7 +20,7 @@ public class Movie {
     @Range(min = 1, message = "Must enter the year it began.")
     private int year;
 
-    private Date releaseDate;
+    private ReleaseDate releaseDate;
 
     private String genre;
     private String director;
@@ -33,7 +33,7 @@ public class Movie {
 
 
 
-    public Movie(String movieName, int year, Date releaseDate, String genre, String director, String franchise, String rating, String importance, String type) {
+    public Movie(String movieName, int year, ReleaseDate releaseDate, String genre, String director, String franchise, String rating, String importance, String type) {
         this();
 
         this.movieName = movieName;
@@ -76,12 +76,12 @@ public class Movie {
         this.year = year;
     }
 
-    public Date getReleaseDate() {
+    public ReleaseDate getReleaseDate() {
 
         return releaseDate;
     }
 
-    public void setReleaseDate(Date releaseDate) {
+    public void setReleaseDate(ReleaseDate releaseDate) {
 
         this.releaseDate = releaseDate;
     }
