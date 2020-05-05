@@ -30,6 +30,7 @@ public class MovieController {
         model.addAttribute("title", "Add Movie");
         model.addAttribute(new Movie());
 
+        model.addAttribute("date");
         model.addAttribute("genres", GenreType.values());
         model.addAttribute("ratings", Rating.values());
         model.addAttribute("importances", Importance.values());
@@ -48,7 +49,6 @@ public class MovieController {
 */
             System.out.println(newMovie.getReleaseDate());
             System.out.println(newMovie.getDirector());
-            System.out.println(newMovie.getType());
             MovieData.add(newMovie);
             return "redirect:";
         }
