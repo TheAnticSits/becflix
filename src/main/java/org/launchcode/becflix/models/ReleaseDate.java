@@ -2,21 +2,24 @@ package org.launchcode.becflix.models;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import java.util.Date;
+import java.text.DateFormat;
 
 public class ReleaseDate {
 
-    private Date releaseDate;
+    @DateTimeFormat(style = "MM/dd/yyyy")
+    private DateFormat releaseDate;
 
-    public ReleaseDate(Date releaseDate){
+    public ReleaseDate(DateFormat releaseDate){
         this.releaseDate = releaseDate;
+        System.out.println(releaseDate);
+        System.out.println("Trial");
     }
 
-    public Date getReleaseDate() {
+    public DateFormat getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(Date releaseDate) {
+    public void setReleaseDate(DateFormat releaseDate) {
         this.releaseDate = releaseDate;
     }
 }
