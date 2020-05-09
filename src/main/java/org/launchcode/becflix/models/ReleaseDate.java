@@ -1,8 +1,8 @@
 package org.launchcode.becflix.models;
 
 
+public class ReleaseDate{
 
-public class ReleaseDate {
 
 
 }
