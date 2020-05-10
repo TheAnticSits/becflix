@@ -18,9 +18,12 @@ public class Movie {
     private String movieName;
 
     @Range(min = 1, message = "Must enter the year it began.")
+
+    private int month;
+    private int day;
     private int year;
 
-    private ReleaseDate releaseDate;
+
 
     private String genre;
     private String director;
@@ -33,12 +36,13 @@ public class Movie {
 
 
 
-    public Movie(String movieName, int year, ReleaseDate releaseDate, String genre, String director, String franchise, String rating, String importance, String type) {
+    public Movie(String movieName, int month, int day, int year, String genre, String director, String franchise, String rating, String importance, String type) {
         this();
 
         this.movieName = movieName;
+        this.month = month;
+        this.day = day;
         this.year = year;
-        this.releaseDate = releaseDate;
         this.genre = genre;
         this.director = director;
         this.franchise = franchise;
@@ -68,22 +72,28 @@ public class Movie {
         this.movieName = title;
     }
 
+    public int getMonth() {
+        return month;
+    }
+
+    public void setMonth(int month) {
+        this.month = month;
+    }
+
+    public int getDay() {
+        return day;
+    }
+
+    public void setDay(int day) {
+        this.day = day;
+    }
+
     public int getYear() {
         return year;
     }
 
     public void setYear(int year) {
         this.year = year;
-    }
-
-    public ReleaseDate getReleaseDate() {
-
-        return releaseDate;
-    }
-
-    public void setReleaseDate(ReleaseDate releaseDate) {
-
-        this.releaseDate = releaseDate;
     }
 
     public String getGenre() {
