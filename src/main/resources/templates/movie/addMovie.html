@@ -93,7 +93,7 @@
     Month - Day - Year
     <br>
     <div class="form-group">
-    <label>Live Action or Animation?<br>
+    <label>
         <select th:field="${movie.month}">
             <option th:each="month : ${months}"
                     th:value="${month.displayMonth}"
@@ -101,9 +101,16 @@
             ></option>
         </select>
     </label>
+        <label>
+            <select th:field="${movie.dayOfMonth}">
+                <option th:each="dayOfMonth : ${dayOfMonths}"
+                        th:value="${dayOfMonth.displayDay}"
+                        th:text="${dayOfMonth.displayDay}"
+                ></option>
+            </select>
+        </label>
     </div>
     <br>
-    <input name="day" type="int" th:field="${movie.day}" />
     <input name="year" type="int" th:field="${movie.year}" />
     <br>
     <br>
