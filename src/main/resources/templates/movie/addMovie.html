@@ -26,20 +26,7 @@
     <br>
     <input class="form-control" id="name-field" th:field="${movie.movieName}"/>
     <p class="error" th:errors="${movie.movieName}"></p>
-    <br>
-    <br>
-    Release Year
-    <br>
-    <input name="year" type="int" th:field="${movie.year}" />
-    <p class="error" th:errors="${movie.year}"></p>
-    <br>
-    <br>
-    Release Date<br>
-    Month - Day - Year
-    <br>
-    <input name="month" th:field="${movie.month}" />
-    <input name="day" type="int" th:field="${movie.day}" />
-    <input name="year" type="int" th:field="${movie.year}" />
+
     <br>
     <br>
 
@@ -100,6 +87,26 @@
             </select>
         </label>
     </div>
+    <br>
+    <br>
+    Release Date<br>
+    Month - Day - Year
+    <br>
+    <div class="form-group">
+    <label>Live Action or Animation?<br>
+        <select th:field="${movie.month}">
+            <option th:each="month : ${months}"
+                    th:value="${month.displayMonth}"
+                    th:text="${month.displayMonth}"
+            ></option>
+        </select>
+    </label>
+    </div>
+    <br>
+    <input name="day" type="int" th:field="${movie.day}" />
+    <input name="year" type="int" th:field="${movie.year}" />
+    <br>
+    <br>
 
     <input class="myButton" type="submit" value="Add To Movie List" />
 </form>

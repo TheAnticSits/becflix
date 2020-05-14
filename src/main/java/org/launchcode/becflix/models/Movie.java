@@ -18,7 +18,7 @@ public class Movie {
 
     @Range(min = 1, message = "Must enter the year it began.")
 
-    private int month;
+    private String month;
     private int day;
     private int year;
 
@@ -35,7 +35,7 @@ public class Movie {
 
 
 
-    public Movie(String movieName, int month, int day, int year, String genre, String director, String franchise, String rating, String importance, String type) {
+    public Movie(String movieName, String month, int day, int year, String genre, String director, String franchise, String rating, String importance, String type) {
         this();
 
         this.movieName = movieName;
@@ -71,11 +71,11 @@ public class Movie {
         this.movieName = title;
     }
 
-    public int getMonth() {
+    public String getMonth() {
         return month;
     }
 
-    public void setMonth(int month) {
+    public void setMonth(String month) {
         this.month = month;
     }
 

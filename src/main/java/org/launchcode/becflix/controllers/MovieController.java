@@ -33,6 +33,7 @@ public class MovieController {
         model.addAttribute("ratings", Rating.values());
         model.addAttribute("importances", Importance.values());
         model.addAttribute("types", Type.values());
+        model.addAttribute("months", Month.values());
         return "movie/addMovie";
     }
 
