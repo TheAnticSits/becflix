@@ -20,7 +20,7 @@ public class Movie {
 
     private String month;
     private String dayOfMonth;
-    private int year;
+    private String year;
 
 
 
@@ -35,7 +35,7 @@ public class Movie {
 
 
 
-    public Movie(String movieName, String month, String dayOfMonth, int year, String genre, String director, String franchise, String rating, String importance, String type) {
+    public Movie(String movieName, String month, String dayOfMonth, String year, String genre, String director, String franchise, String rating, String importance, String type) {
         this();
 
         this.movieName = movieName;
@@ -87,11 +87,11 @@ public class Movie {
         this.dayOfMonth = dayOfMonth;
     }
 
-    public int getYear() {
+    public String getYear() {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(String year) {
         this.year = year;
     }
 

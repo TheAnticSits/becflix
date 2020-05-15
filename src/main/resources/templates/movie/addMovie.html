@@ -109,9 +109,15 @@
                 ></option>
             </select>
         </label>
+        <label>
+            <select th:field="${movie.year}">
+                <option th:each="year : ${years}"
+                        th:value="${year.displayYear}"
+                        th:text="${year.displayYear}"
+                        ></option>
+            </select>
+        </label>
     </div>
-    <br>
-    <input name="year" type="int" th:field="${movie.year}" />
     <br>
     <br>
 

@@ -35,6 +35,7 @@ public class MovieController {
         model.addAttribute("types", Type.values());
         model.addAttribute("months", Month.values());
         model.addAttribute("dayOfMonths", DayOfMonth.values());
+        model.addAttribute("years", Year.values());
         return "movie/addMovie";
     }
 
