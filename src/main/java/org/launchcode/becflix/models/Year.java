@@ -47,191 +47,191 @@ public enum Year {
     MCMXXVIII("1928"),
     MCMXXIX("1929"),
     MCMXXX("1930"),
-            MCMXXXI
-    MCMXXXII
-            MCMXXXIII
-    MCMXXXIV
-            MCMXXXV
-    MCMXXXVI
-            MCMXXXVII
-    MCMXXXVIII
-            MCMXXXIX
-    MCMXL
-            MCMXLI
-    MCMXLII
-            MCMXLIII
-    MCMXLIV
-            MCMXLV
-    MCMXLVI
-            MCMXLVII
-    MCMXLVIII
-            MCMXLIX
-    MCML
-            MCMLI
+    MCMXXXI("1931"),
+    MCMXXXII("1932"),
+    MCMXXXIII("1933"),
+    MCMXXXIV("1934"),
+    MCMXXXV("1935"),
+    MCMXXXVI("1936"),
+    MCMXXXVII("1937"),
+    MCMXXXVIII("1938"),
+    MCMXXXIX("1939"),
+    MCMXL("1940"),
+    MCMXLI("1941"),
+    MCMXLII("1942"),
+    MCMXLIII("1943"),
+    MCMXLIV("1944"),
+    MCMXLV("1945"),
+    MCMXLVI("1946"),
+    MCMXLVII("1947"),
+    MCMXLVIII("1948"),
+    MCMXLIX("1949"),
+    MCML("1950"),
+    MCMLI
     MCMLII
-            MCMLIII
+    MCMLIII
     MCMLIV
-            MCMLV
+    MCMLV
     MCMLVI
-            MCMLVII
+    MCMLVII
     MCMLVIII
-            MCMLIX
+    MCMLIX
     MCMLX
-            MCMLXI
+    MCMLXI
     MCMLXII
-            MCMLXIII
+    MCMLXIII
     MCMLXIV
-            MCMLXV
+    MCMLXV
     MCMLXVI
-            MCMLXVII
+    MCMLXVII
     MCMLXVIII
-            MCMLXIX
+    MCMLXIX
     MCMLXX
-            MCMLXXI
+    MCMLXXI
     MCMLXXII
-            MCMLXXIII
+    MCMLXXIII
     MCMLXXIV
-            MCMLXXV
+    MCMLXXV
     MCMLXXVI
-            MCMLXXVII
+    MCMLXXVII
     MCMLXXVIII
-            MCMLXXIX
+    MCMLXXIX
     MCMLXXX
-            MCMLXXXI
+    MCMLXXXI
     MCMLXXXII
-            MCMLXXXIII
+    MCMLXXXIII
     MCMLXXXIV
-            MCMLXXXV
+    MCMLXXXV
     MCMLXXXVI
-            MCMLXXXVII
+    MCMLXXXVII
     MCMLXXXVIII
-            MCMLXXXIX
+    MCMLXXXIX
     MCMXC
-            MCMXCI
+    MCMXCI
     MCMXCII
-            MCMXCIII
+    MCMXCIII
     MCMXCIV
-            MCMXCV
+    MCMXCV
     MCMXCVI
-            MCMXCVII
+    MCMXCVII
     MCMXCVIII
-            MCMXCIX
+    MCMXCIX
     MM
-            MMI
+    MMI
     MMII
-            MMIII
+    MMIII
     MMIV
-            MMV
+    MMV
     MMVI
-            MMVII
+    MMVII
     MMVIII
-            MMIX
+    MMIX
     MMX
-            MMXI
+    MMXI
     MMXII
-            MMXIII
+    MMXIII
     MMXIV
-            MMXV
+    MMXV
     MMXVI
-            MMXVII
+    MMXVII
     MMXVIII
-            MMXIX
+    MMXIX
     MMXX
-            MMXXI
+    MMXXI
     MMXXII
-            MMXXIII
+    MMXXIII
     MMXXIV
-            MMXXV
+    MMXXV
     MMXXVI
-            MMXXVII
+    MMXXVII
     MMXXVIII
-            MMXXIX
+    MMXXIX
     MMXXX
-            MMXXXI
+    MMXXXI
     MMXXXII
-            MMXXXIII
+    MMXXXIII
     MMXXXIV
-            MMXXXV
+    MMXXXV
     MMXXXVI
-            MMXXXVII
+    MMXXXVII
     MMXXXVIII
-            MMXXXIX
+    MMXXXIX
     MMXL
-            MMXLI
+    MMXLI
     MMXLII
-            MMXLIII
+    MMXLIII
     MMXLIV
-            MMXLV
+    MMXLV
     MMXLVI
-            MMXLVII
+    MMXLVII
     MMXLVIII
-            MMXLIX
+    MMXLIX
     MML
-            MMLI
+    MMLI
     MMLII
-            MMLIII
+    MMLIII
     MMLIV
-            MMLV
+    MMLV
     MMLVI
-            MMLVII
+    MMLVII
     MMLVIII
-            MMLIX
+    MMLIX
     MMLX
-            MMLXI
+    MMLXI
     MMLXII
-            MMLXIII
+    MMLXIII
     MMLXIV
-            MMLXV
+    MMLXV
     MMLXVI
-            MMLXVII
+    MMLXVII
     MMLXVIII
-            MMLXIX
+    MMLXIX
     MMLXX
-            MMLXXI
+    MMLXXI
     MMLXXII
-            MMLXXIII
+    MMLXXIII
     MMLXXIV
-            MMLXXV
+    MMLXXV
     MMLXXVI
-            MMLXXVII
+    MMLXXVII
     MMLXXVIII
-            MMLXXIX
+    MMLXXIX
     MMLXXX
-            MMLXXXI
+    MMLXXXI
     MMLXXXII
-            MMLXXXIII
+    MMLXXXIII
     MMLXXXIV
-            MMLXXXV
+    MMLXXXV
     MMLXXXVI
-            MMLXXXVII
+    MMLXXXVII
     MMLXXXVIII
-            MMLXXXIX
+    MMLXXXIX
     MMXC
-            MMXCI
+    MMXCI
     MMXCII
-            MMXCIII
+    MMXCIII
     MMXCIV
-            MMXCV
+    MMXCV
     MMXCVI
-            MMXCVII
+    MMXCVII
     MMXCVIII
-            MMXCIX
+    MMXCIX
     MMC
-            MMCI
+    MMCI
     MMCII
-            MMCIII
+    MMCIII
     MMCIV
-            MMCV
+    MMCV
     MMCVI
-            MMCVII
+    MMCVII
     MMCVIII
-            MMCIX
+    MMCIX
     MMCX
-            MMCXI
+    MMCXI
     MMCXII
-            MMCXIII
+    MMCXIII
     MMCXIV
-            MMCXV
+    MMCXV
 */
 
 
