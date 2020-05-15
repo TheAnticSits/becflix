@@ -15,38 +15,38 @@ public enum Year {
     MDCCCXCVII("1897"),
     MDCCCXCVIII("1898"),
     MDCCCXCIX("1899"),
-    MCM("1900");
+    MCM("1900"),
+    MCMI("1901"),
+    MCMII("1902"),
+    MCMIII("1903"),
+    MCMIV("1904"),
+    MCMV("1905"),
+    MCMVI("1906"),
+    MCMVII("1907"),
+    MCMVIII("1908"),
+    MCMIX("1909"),
+    MCMX("1910"),
+    MCMXI("1911"),
+    MCMXII("1912"),
+    MCMXIII("1913"),
+    MCMXIV("1914"),
+    MCMXV("1915"),
+    MCMXVI("1916"),
+    MCMXVII("1917"),
+    MCMXVIII("1918"),
+    MCMXIX("1919"),
+    MCMXX("1920");
     /*
-    MCMI
-    MCMII
-            MCMIII
-    MCMIV
-            MCMV
-    MCMVI
-            MCMVII
-    MCMVIII
-            MCMIX
-    MCMX
-            MCMXI
-    MCMXII
-            MCMXIII
-    MCMXIV
-            MCMXV
-    MCMXVI
-            MCMXVII
-    MCMXVIII
-            MCMXIX
-    MCMXX
-            MCMXXI
-    MCMXXII
-            MCMXXIII
-    MCMXXIV
-            MCMXXV
-    MCMXXVI
-            MCMXXVII
-    MCMXXVIII
-            MCMXXIX
-    MCMXXX
+    MCMXXI("1921"),
+    MCMXXII("1922"),
+    MCMXXIII("1923"),
+    MCMXXIV("1924"),
+    MCMXXV("1925"),
+    MCMXXVI("1926"),
+    MCMXXVII("1927"),
+    MCMXXVIII("1928"),
+    MCMXXIX("1929"),
+    MCMXXX("1930"),
             MCMXXXI
     MCMXXXII
             MCMXXXIII
