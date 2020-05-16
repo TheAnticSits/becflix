@@ -85,10 +85,9 @@ public enum Year {
     MCMLXVII("1967"),
     MCMLXVIII("1968"),
     MCMLXIX("1969"),
-    MCMLXX("1970");
-    /*
+    MCMLXX("1970"),
     MCMLXXI("1971"),
-    MCMLXXII("1972("1970"),"),
+    MCMLXXII("1972"),
     MCMLXXIII("1973"),
     MCMLXXIV("1974"),
     MCMLXXV("1975"),
@@ -137,56 +136,58 @@ public enum Year {
     MMXVIII("2018"),
     MMXIX("2019"),
     MMXX("2020"),
-    MMXXI
-    MMXXII
-    MMXXIII
-    MMXXIV
-    MMXXV
-    MMXXVI
-    MMXXVII
-    MMXXVIII
-    MMXXIX
-    MMXXX
-    MMXXXI
-    MMXXXII
-    MMXXXIII
-    MMXXXIV
-    MMXXXV
-    MMXXXVI
-    MMXXXVII
-    MMXXXVIII
-    MMXXXIX
-    MMXL
-    MMXLI
-    MMXLII
-    MMXLIII
-    MMXLIV
-    MMXLV
-    MMXLVI
-    MMXLVII
-    MMXLVIII
-    MMXLIX
-    MML
-    MMLI
-    MMLII
-    MMLIII
-    MMLIV
-    MMLV
-    MMLVI
-    MMLVII
-    MMLVIII
-    MMLIX
-    MMLX
-    MMLXI
-    MMLXII
-    MMLXIII
-    MMLXIV
-    MMLXV
-    MMLXVI
-    MMLXVII
-    MMLXVIII
-    MMLXIX
-    MMLXX
+    MMXXI("2021"),
+    MMXXII("2022"),
+    MMXXIII("2023"),
+    MMXXIV("2024"),
+    MMXXV("2025"),
+    MMXXVI("2026"),
+    MMXXVII("2027"),
+    MMXXVIII("2028"),
+    MMXXIX("2029"),
+    MMXXX("2030"),
+    MMXXXI("2031"),
+    MMXXXII("2032"),
+    MMXXXIII("2033"),
+    MMXXXIV("2034"),
+    MMXXXV("2035"),
+    MMXXXVI("2036"),
+    MMXXXVII("2037"),
+    MMXXXVIII("2038"),
+    MMXXXIX("2039"),
+    MMXL("2040"),
+    MMXLI("2041"),
+    MMXLII("2042"),
+    MMXLIII("2043"),
+    MMXLIV("2044"),
+    MMXLV("2045"),
+    MMXLVI("2046"),
+    MMXLVII("2047"),
+    MMXLVIII("2048"),
+    MMXLIX("2049"),
+    MML("2050"),
+    MMLI("2051"),
+    MMLII("2052"),
+    MMLIII("2053"),
+    MMLIV("2054"),
+    MMLV("2055"),
+    MMLVI("2056"),
+    MMLVII("2057"),
+    MMLVIII("2058"),
+    MMLIX("2059"),
+    MMLX("2060"),
+    MMLXI("2061"),
+    MMLXII("2062"),
+    MMLXIII("2063"),
+    MMLXIV("2064"),
+    MMLXV("2065"),
+    MMLXVI("2066"),
+    MMLXVII("2067"),
+    MMLXVIII("2068"),
+    MMLXIX("2069"),
+    MMLXX("2070");
+
+    /*
     MMLXXI
     MMLXXII
     MMLXXIII
@@ -231,8 +232,7 @@ public enum Year {
     MMCXII
     MMCXIII
     MMCXIV
-    MMCXV
-*/
+    MMCXV*/
 
 
     private final String displayYear;
