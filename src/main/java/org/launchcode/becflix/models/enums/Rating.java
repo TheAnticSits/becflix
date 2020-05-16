@@ -1,4 +1,4 @@
-package org.launchcode.becflix.models;
+package org.launchcode.becflix.models.enums;
 
 public enum Rating {
 

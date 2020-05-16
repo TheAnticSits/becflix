@@ -3,6 +3,7 @@ package org.launchcode.becflix.controllers;
 
 import org.launchcode.becflix.models.*;
 import org.launchcode.becflix.data.MovieData;
+import org.launchcode.becflix.models.enums.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
