@@ -1,8 +1,7 @@
 package org.launchcode.becflix.models;
 
 public enum Year {
-
-
+    
     MDCCCLXXXVIII("1888"),
     MDCCCLXXXIX("1889"),
     MDCCCXC("1890"),
