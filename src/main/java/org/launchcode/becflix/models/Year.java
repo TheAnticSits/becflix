@@ -35,8 +35,7 @@ public enum Year {
     MCMXVII("1917"),
     MCMXVIII("1918"),
     MCMXIX("1919"),
-    MCMXX("1920");
-    /*
+    MCMXX("1920"),
     MCMXXI("1921"),
     MCMXXII("1922"),
     MCMXXIII("1923"),
@@ -67,26 +66,27 @@ public enum Year {
     MCMXLVIII("1948"),
     MCMXLIX("1949"),
     MCML("1950"),
-    MCMLI
-    MCMLII
-    MCMLIII
-    MCMLIV
-    MCMLV
-    MCMLVI
-    MCMLVII
-    MCMLVIII
-    MCMLIX
-    MCMLX
-    MCMLXI
-    MCMLXII
-    MCMLXIII
-    MCMLXIV
-    MCMLXV
-    MCMLXVI
-    MCMLXVII
-    MCMLXVIII
-    MCMLXIX
-    MCMLXX
+    MCMLI("1951"),
+    MCMLII("1952"),
+    MCMLIII("1953"),
+    MCMLIV("1954"),
+    MCMLV("1955"),
+    MCMLVI("1956"),
+    MCMLVII("1957"),
+    MCMLVIII("1958"),
+    MCMLIX("1959"),
+    MCMLX("1960"),
+    MCMLXI("1961"),
+    MCMLXII("1962"),
+    MCMLXIII("1963"),
+    MCMLXIV("1964"),
+    MCMLXV("1965"),
+    MCMLXVI("1966"),
+    MCMLXVII("1967"),
+    MCMLXVIII("1968"),
+    MCMLXIX("1969"),
+    MCMLXX("1970");
+    /*
     MCMLXXI
     MCMLXXII
     MCMLXXIII
