@@ -28,7 +28,6 @@ public class ShowController {
         model.addAttribute("title", "Add Show");
         model.addAttribute(new Show());
         model.addAttribute("genres", GenreType.values());
-        model.addAttribute("ratings", Rating.values());
         model.addAttribute("importances", Importance.values());
         model.addAttribute("types", Type.values());
         model.addAttribute("months", Month.values());
