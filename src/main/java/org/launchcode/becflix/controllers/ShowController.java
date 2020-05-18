@@ -3,6 +3,7 @@ package org.launchcode.becflix.controllers;
 
 import org.launchcode.becflix.data.ShowData;
 import org.launchcode.becflix.models.Show;
+import org.launchcode.becflix.models.enums.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -26,6 +27,13 @@ public class ShowController {
     public String displayAddShowForm(Model model){
         model.addAttribute("title", "Add Show");
         model.addAttribute(new Show());
+        model.addAttribute("genres", GenreType.values());
+        model.addAttribute("ratings", Rating.values());
+        model.addAttribute("importances", Importance.values());
+        model.addAttribute("types", Type.values());
+        model.addAttribute("months", Month.values());
+        model.addAttribute("dayOfMonths", DayOfMonth.values());
+        model.addAttribute("years", Year.values());
         return "show/addShow";
     }
 
