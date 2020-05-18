@@ -12,7 +12,10 @@ public class Show {
     private String name;
 
 //    @NotBlank(message = "Must enter the year this show started.")
-    private int year;
+    private String month;
+    private String dayOfMonth;
+    private String year;
+
 //    private String actor;
     private String genre;
     private String importance;
@@ -21,8 +24,10 @@ public class Show {
 //    private String spinoff;
 
 
-    public Show(String name, int year, String genre, String importance){
+    public Show(String name, String month, String dayOfMonth, String year, String genre, String importance){
         this.name = name;
+        this.month = month;
+        this.dayOfMonth = dayOfMonth;
         this.year = year;
 //        this.actor = actor;
         this.genre = genre;
@@ -46,11 +51,27 @@ public class Show {
         this.name = name;
     }
 
-    public int getYear() {
+    public String getMonth() {
+        return month;
+    }
+
+    public void setMonth(String month) {
+        this.month = month;
+    }
+
+    public String getDayOfMonth() {
+        return dayOfMonth;
+    }
+
+    public void setDayOfMonth(String dayOfMonth) {
+        this.dayOfMonth = dayOfMonth;
+    }
+
+    public String getYear() {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(String year) {
         this.year = year;
     }
 

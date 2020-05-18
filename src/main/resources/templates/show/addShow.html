@@ -55,7 +55,37 @@
     </select>
     <br>
     <br>
-
+    <br>
+    <br>
+    Release Date<br>
+    Month - Day - Year
+    <br>
+    <div class="form-group">
+        <label>
+            <select th:field="${show.month}">
+                <option th:each="month : ${months}"
+                        th:value="${month.displayMonth}"
+                        th:text="${month.displayMonth}"
+                ></option>
+            </select>
+        </label>
+        <label>
+            <select th:field="${show.dayOfMonth}">
+                <option th:each="dayOfMonth : ${dayOfMonths}"
+                        th:value="${dayOfMonth.displayDay}"
+                        th:text="${dayOfMonth.displayDay}"
+                ></option>
+            </select>
+        </label>
+        <label>
+            <select th:field="${show.year}">
+                <option th:each="year : ${years}"
+                        th:value="${year.displayYear}"
+                        th:text="${year.displayYear}"
+                ></option>
+            </select>
+        </label>
+    </div>
 
     <input class="myButton" type="submit" value="Add Another TV Show" />
 </form>
