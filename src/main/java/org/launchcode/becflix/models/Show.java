@@ -7,11 +7,11 @@ public class Show {
 
     private int showId;
 
-    @NotBlank(message = "Must have a TV Show Name.")
-    @Size(min = 1, max = 40)
+//    @NotBlank(message = "Must have a TV Show Name.")
+//    @Size(min = 1, max = 40)
     private String name;
 
-    @NotBlank(message = "Must enter the year this show started.")
+//    @NotBlank(message = "Must enter the year this show started.")
     private int year;
 //    private String actor;
     private String genre;
