@@ -39,6 +39,8 @@ syntax highlighting and error reporting.  Tells intellij that this should confor
         <th>M</th>
         <th>D</th>
         <th>Year of Release</th>
+        <th>||</th>
+        <th>Type of Show</th>
     </tr>
 <hr/>
     <tr th:each="show : ${shows}">
@@ -51,6 +53,8 @@ syntax highlighting and error reporting.  Tells intellij that this should confor
         <td th:text="${show.month}">/</td>
         <td th:text="${show.dayOfMonth}">/</td>
         <td th:text="${show.year}"></td>
+        <td>||</td>
+        <td th:text="${show.type}"></td>
     </tr>
 </table>
 </br>

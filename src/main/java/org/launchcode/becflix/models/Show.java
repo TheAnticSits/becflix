@@ -19,12 +19,13 @@ public class Show {
 //    private String actor;
     private String genre;
     private String importance;
+    private String type;
     private static int nextId = 1;
 //    private Array keywords;
 //    private String spinoff;
 
 
-    public Show(String name, String month, String dayOfMonth, String year, String genre, String importance){
+    public Show(String name, String month, String dayOfMonth, String year, String genre, String importance, String type){
         this.name = name;
         this.month = month;
         this.dayOfMonth = dayOfMonth;
@@ -32,6 +33,7 @@ public class Show {
 //        this.actor = actor;
         this.genre = genre;
         this.importance = importance;
+        this.type = type;
     }
 
     public Show() {
@@ -89,5 +91,13 @@ public class Show {
 
     public void setImportance(String importance) {
         this.importance = importance;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }
