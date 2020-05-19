@@ -36,17 +36,17 @@ syntax highlighting and error reporting.  Tells intellij that this should confor
         <th>||</th>
         <th>Genre</th>
         <th>||</th>
-        <th>Director</th>
-        <th>||</th>
         <th>Rating</th>
-        <th>||</th>
-        <th>Franchise</th>
         <th>||</th>
         <th>Type of Film</th>
         <th>||</th>
         <th>M</th>
         <th>D</th>
         <th>Year of Release</th>
+        <th>||</th>
+        <th>Director</th>
+        <th>||</th>
+        <th>Franchise</th>
     </tr>
 <hr/>
     <tr th:each="movie : ${movies}">
@@ -56,17 +56,17 @@ syntax highlighting and error reporting.  Tells intellij that this should confor
         <td>||</td>
         <td th:text="${movie.genre}"></td>
         <td>||</td>
-        <td th:text="${movie.director}"></td>
-        <td>||</td>
         <td th:text="${movie.rating}"></td>
-        <td>||</td>
-        <td th:text="${movie.franchise}"></td>
         <td>||</td>
         <td th:text="${movie.type}"></td>
         <td>||</td>
         <td th:text="${movie.month}">/</td>
         <td th:text="${movie.dayOfMonth}">/</td>
         <td th:text="${movie.year}"></td>
+        <td>||</td>
+        <td th:text="${movie.director}"></td>
+        <td>||</td>
+        <td th:text="${movie.franchise}"></td>
     </tr>
 </table>
 </br>
