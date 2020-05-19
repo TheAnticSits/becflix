@@ -42,17 +42,16 @@
 
     How important is this to you?
     <br>
-    <select name="importance" type="text" th:field="${show.importance}">
-        <option value="Unsure">I need to figure that out</option>
-        <option value="Extremely Important">Extremely Important</option>
-        <option value="Super Important">Super Important</option>
-        <option value="Very Important">Very Important</option>
-        <option value="Important">Important</option>
-        <option value="Not Urgent">Not Urgent</option>
-        <option value="It Can Wait">It Can Wait</option>
-        <option value="Kinda Want To See It">Kinda Want To See It</option>
-        <option value="Meh">Meh</option>
-    </select>
+    <div class="form-group">
+        <label>How important is this to you?<br>
+            <select th:field="${show.importance}">
+                <option th:each="importance : ${importances}"
+                        th:value="${importance.displayImportance}"
+                        th:text="${importance.displayImportance}"
+                ></option>
+            </select>
+        </label>
+    </div>
     <br>
     <br>
     Release Date<br>
