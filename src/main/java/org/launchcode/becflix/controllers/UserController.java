@@ -65,8 +65,18 @@ public class UserController {
     }
 
     @GetMapping("userProfile")
-    public String displayEditUserProfileForm(Model model){
+    public String displayUserProfileForm(Model model){
         return "user/userProfile";
+    }
+
+    @GetMapping("editUserProfile")
+    public String displayEditUserProfileForm(Model model){
+        return"user/editUserProfile";
+    }
+
+    @PostMapping("editUserProfile")
+    public String processEditUserProfileForm(){
+        return "redirect:";
     }
 
 }
