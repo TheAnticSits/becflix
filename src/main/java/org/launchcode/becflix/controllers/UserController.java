@@ -64,4 +64,9 @@ public class UserController {
         return "redirect:";
     }
 
+    @GetMapping("userProfile")
+    public String displayEditUserProfileForm(Model model){
+        return "user/userProfile";
+    }
+
 }
