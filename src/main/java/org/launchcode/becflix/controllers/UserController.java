@@ -71,6 +71,9 @@ public class UserController {
 
     @GetMapping("editUserProfile")
     public String displayEditUserProfileForm(Model model){
+
+        model.addAttribute("title", "User Profile");
+
         return"user/editUserProfile";
     }
 

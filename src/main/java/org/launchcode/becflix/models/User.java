@@ -22,13 +22,15 @@ public class User {
     private String password;
 
     private String verifyPass;
+    private String favoriteActor;
 
 
-    public User(String username, String email, String password, String verifyPass){
+    public User(String username, String email, String password, String verifyPass, String favoriteActor){
         this.username = username;
         this.email = email;
         this.password = password;
         this.verifyPass = verifyPass;
+        this.favoriteActor = favoriteActor;
     }
 
     public User(){
@@ -70,5 +72,13 @@ public class User {
 
     public int getUserId() {
         return userId;
+    }
+
+    public String getFavoriteActor() {
+        return favoriteActor;
+    }
+
+    public void setFavoriteActor(String favoriteActor) {
+        this.favoriteActor = favoriteActor;
     }
 }
