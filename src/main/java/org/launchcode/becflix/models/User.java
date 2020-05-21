@@ -23,14 +23,20 @@ public class User {
 
     private String verifyPass;
     private String favoriteActor;
+    private String favoriteActress;
+    private String favoriteMovie;
+    private String favoriteShow;
 
 
-    public User(String username, String email, String password, String verifyPass, String favoriteActor){
+    public User(String username, String email, String password, String verifyPass, String favoriteActor, String favoriteActress, String favoriteMovie, String favoriteShow){
         this.username = username;
         this.email = email;
         this.password = password;
         this.verifyPass = verifyPass;
         this.favoriteActor = favoriteActor;
+        this.favoriteActress = favoriteActress;
+        this.favoriteMovie = favoriteMovie;
+        this.favoriteShow = favoriteShow;
     }
 
     public User(){
@@ -80,5 +86,29 @@ public class User {
 
     public void setFavoriteActor(String favoriteActor) {
         this.favoriteActor = favoriteActor;
+    }
+
+    public String getFavoriteActress() {
+        return favoriteActress;
+    }
+
+    public void setFavoriteActress(String favoriteActress) {
+        this.favoriteActress = favoriteActress;
+    }
+
+    public String getFavoriteMovie() {
+        return favoriteMovie;
+    }
+
+    public void setFavoriteMovie(String favoriteMovie) {
+        this.favoriteMovie = favoriteMovie;
+    }
+
+    public String getFavoriteShow() {
+        return favoriteShow;
+    }
+
+    public void setFavoriteShow(String favoriteShow) {
+        this.favoriteShow = favoriteShow;
     }
 }

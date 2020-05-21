@@ -3,6 +3,7 @@ package org.launchcode.becflix.controllers;
 
 import org.launchcode.becflix.data.UserData;
 import org.launchcode.becflix.models.User;
+import org.launchcode.becflix.models.enums.GenreType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -73,6 +74,7 @@ public class UserController {
     public String displayEditUserProfileForm(Model model){
 
         model.addAttribute("title", "User Profile");
+        model.addAttribute("genres", GenreType.values());
 
         return"user/editUserProfile";
     }
