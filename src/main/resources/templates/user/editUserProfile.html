@@ -33,16 +33,27 @@ syntax highlighting and error reporting.  Tells intellij that this should confor
 <br>
 <br>
 <br>
-Who's The Best Actor of All Time?
-<input class="form-control" id="favoriteActor-field" name="favoriteActor" />
-Who's Your Favorite Actress?
-<input class="form-control" id="favoriteActress-field" name="favoriteActress" />
-What is the Best Movie Ever?
-<input class="form-control" id="favoriteMovie-field" name="favoriteMovie" />
-What's the Best TV Show Ever?
-<input class="form-control" id="favoriteShow-field" name="favoriteShow" />
-What Is Your Favorite Genre?
-
+Who's The Best Actor of All Time?<br>
+<input class="form-control" id="favoriteActor-field" name="favoriteActor" /><br><br>
+Who's Your Favorite Actress?<br>
+<input class="form-control" id="favoriteActress-field" name="favoriteActress" /><br><br>
+What is the Best Movie Ever?<br>
+<input class="form-control" id="favoriteMovie-field" name="favoriteMovie" /><br><br>
+What's the Best TV Show Ever?<br>
+<input class="form-control" id="favoriteShow-field" name="favoriteShow" /><br><br>
+    <div class="form-group">
+        <label>What is your favorite Genre?<br>
+            <select name="genre">
+                <option th:each="genre : ${genres}"
+                        th:value="${genre.displayGenre}"
+                        th:text="${genre.displayGenre}"
+                ></option>
+            </select>
+        </label>
+    </div>
+    <br>
+    <br>
+    <input class="myButton" type="submit" value="Submit Answers" />
 </div>
 </body>
 </html>
