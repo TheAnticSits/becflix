@@ -1,10 +1,35 @@
+
 <!DOCTYPE html>
+<!--attribute " xmlns:th="http://www.thymeleaf.org/ " uses a feature xhmtl. incorporates xml language
+pulls in information about the tags that are being used that are part of thymeleaf.  Allows for
+syntax highlighting and error reporting.  Tells intellij that this should conform to thymeleaf.-->
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head>
-    <head th:replace="fragments :: head"></head>
+
+
+<head th:replace="fragments :: head">
+
 </head>
 <body>
-<a><big class="toDoStuff">User basic info and menu for other stuff here.</big></a>
+<hr/>
+<hr/>
+<article>
+    </br>
+    <big><h1 class="titleLine" th:text="${title}" th:align="center">Default Title</h1></big>
+    </br>
+</article>
+<hr/>
+<hr/>
+<!--adding navigation from fragments.-->
+<!--<nav th:replace="fragments :: navigation"></nav>-->
+</br>
+</br>
+
+<div class="homepage-setup">
+    <a href="/user/addUser">Sign Up Here To Make Your List</a>
+    <hr></div>
+<div class="homepage-setup2">
+    <a href="/user/login">Already Signed up?  Log In</a><br><small>or</small><br>
+    <a href="/user">See a LIST OF USERS who've already signed up</a>
 <br>
 <br>
 <br>
@@ -17,7 +42,8 @@ What is the Best Movie Ever?
 What's the Best TV Show Ever?
 <input class="form-control" id="favoriteShow-field" name="favoriteShow" />
 What Is Your Favorite Genre?
-<!--<div class="form-group">
+<!--
+<div class="form-group">
         <select th:field="${user.genre}">
             <option th:each="genre : ${genres}"
                     th:value="${user.displayGenre}"
@@ -25,7 +51,8 @@ What Is Your Favorite Genre?
             ></option>
         </select>
     </label>
-</div>-->
+</div>
+-->
 
 
 
