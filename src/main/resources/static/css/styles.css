@@ -68,6 +68,13 @@ font-size: 30px;
     color: darkviolet;
     }
 
+.profile-questions{
+    text-align: left;
+    color: blue;
+    font-weight: bold;
+    font-size: 25px;
+}
+
 .moviebutton {
     float: left;
     font-size: 40px;
