@@ -16,25 +16,9 @@
 <!--adding navigation from fragments.-->
 <a href="/">Home Page</a>
 
-<h2>User List:</h2>
-
-<table class="table">
-
-    <tr>
-        <th>User</th>
-        <th>||</th>
-        <th>Email</th>
-
-    </tr>
-    <hr/>
-    <tr th:each="user : ${users}">
-        <td th:text="${user.username}"></td>
-        <td>||</td>
-        <td th:text="${user.email}"></td>
+<h2>User Profile:</h2>
 
 
-    </tr>
-</table>
 </br>
 </br>
 
