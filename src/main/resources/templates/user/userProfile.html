@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head>
-    <head th:replace="fragments :: head"></head>
+<head th:replace="fragments :: head">
+
 </head>
 <body>
+<hr/>
+<hr/>
+<article>
+    </br>
+    <big><h1 class="titleLine" th:text="${title}" th:align="center">Default Title</h1></big>
+    </br>
+</article>
+<hr/>
+<hr/>
+<!--adding navigation from fragments.-->
+<a href="/">Home Page</a>
 
+<h2>User List:</h2>
+
+<table class="table">
+
+    <tr>
+        <th>User</th>
+        <th>||</th>
+        <th>Email</th>
+
+    </tr>
+    <hr/>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.username}"></td>
+        <td>||</td>
+        <td th:text="${user.email}"></td>
+
+
+    </tr>
+</table>
+</br>
+</br>
 
 </body>
 </html>
