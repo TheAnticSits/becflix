@@ -82,7 +82,7 @@ public class UserController {
     @PostMapping("editUserProfile")
     public String processEditUserProfileForm(@ModelAttribute @Valid User newUser, Model model){
         UserData.add(newUser);
-        return "redirect:";
+        return "user/index";
     }
 
     @GetMapping("blog")
