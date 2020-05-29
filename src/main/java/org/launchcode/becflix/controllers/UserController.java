@@ -27,6 +27,7 @@ public class UserController {
     public String displayAddUserForm(Model model) {
         model.addAttribute("title", "Add User");
         model.addAttribute(new User());
+        model.addAttribute("genres", GenreType.values());
         return "user/addUser";
     }
 
