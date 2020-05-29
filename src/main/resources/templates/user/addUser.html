@@ -39,6 +39,31 @@
     Verify Password:<input type="password" name="verifyPass" />
     <br>
     <br>
+
+    <div class="profile-questions">
+        Who's The Best Actor of All Time?<br>
+        <input class="form-control" id="favoriteActor-field" name="favoriteActor" /><br><br>
+        Who's Your Favorite Actress?<br>
+        <input class="form-control" id="favoriteActress-field" name="favoriteActress" /><br><br>
+        What is the Best Movie Ever?<br>
+        <input class="form-control" id="favoriteMovie-field" name="favoriteMovie" /><br><br>
+        What's the Best TV Show Ever?<br>
+        <input class="form-control" id="favoriteShow-field" name="favoriteShow" /><br><br>
+        <div class="form-group">
+            <label>What is your favorite Genre?<br>
+                <select name="genre">
+                    <option th:each="genre : ${genres}"
+                            th:value="${genre.displayGenre}"
+                            th:text="${genre.displayGenre}"
+                    ></option>
+                </select>
+            </label>
+        </div>
+        <br>
+        <a href="/user/blog">your blog</a>
+        <br>
+        <br>
+
     <input class="myButton" type="submit" value="Add User" />
 </form>
 </body>
