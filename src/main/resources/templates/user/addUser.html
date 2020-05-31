@@ -18,11 +18,11 @@
 
 <h2>Add New User</h2>
 
-<form method="post" style="max-width:600px;">
+<form class="profile-questions" method="post" style="max-width:600px;">
     <!--    all tags must be closed. "/"-->
     <label for="name-field">User Name</label>
     <br>
-    <input class="form-control" id="name-field" th:field="${user.username}" />
+    <input class="profile-questions" id="name-field" th:field="${user.username}" />
     <p class="error" th:errors="${user.username}"></p>
     <!--    value attribute in submit attribute customizes the button-->
     <br>
