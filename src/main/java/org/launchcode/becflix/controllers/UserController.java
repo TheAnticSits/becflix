@@ -57,7 +57,7 @@ public class UserController {
     @PostMapping(value="login")
     public String processLoginForm(){
 //        TODO Validate and return this data
-        return "redirect:";
+        return "user/userProfile";
     }
 
     @GetMapping(value="logout")
