@@ -55,8 +55,9 @@ public class UserController {
     }
 
     @PostMapping(value="login")
-    public String processLoginForm(){
-//        TODO Validate and return this data
+    public String processLoginForm(Model model){
+        model.addAttribute("title", "Logged In");
+//      Validate and return this data
         return "user/userProfile";
     }
 
