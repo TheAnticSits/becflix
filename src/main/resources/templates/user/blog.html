@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head>
-    <head th:replace="fragments :: head"></head>
+<head th:replace="fragments :: head">
+
 </head>
 <body>
 <hr/>
 <hr/>
 <article>
-    <br/>
-    <big><h1>Blog</h1></big>
-    <br/>
+    </br>
+    <big><h1 class="titleLine" th:text="${title}" th:align="center">Default Title</h1></big>
+    </br>
 </article>
 <hr/>
 <hr/>
