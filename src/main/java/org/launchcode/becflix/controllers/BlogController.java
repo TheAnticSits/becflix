@@ -16,10 +16,7 @@ import javax.validation.Valid;
 @RequestMapping("blog")
 public class BlogController {
 
-/*
-
-
-    @GetMapping
+   /* @GetMapping
     public String displayNewUser(Model model) {
         model.addAttribute("blogs", BlogData.getAll());
         model.addAttribute("title", "Blogs");
@@ -31,19 +28,18 @@ public class BlogController {
     public String displayAddUserForm(Model model) {
         model.addAttribute("title", "Add User");
         model.addAttribute(new Blog());
-        model.addAttribute("genres", GenreType.values());
         return "user/addUser";
     }
 
     @PostMapping(value = "addUser")
-    public String processAddUserForm(@ModelAttribute @Valid Blog newUser, Errors errors, Model model) {
+    public String processAddUserForm(@ModelAttribute @Valid Blog newBlog, Errors errors, Model model) {
         if(errors.hasErrors()){
             model.addAttribute("title", "New User");
 
             return "user/addUser";
         } else {
             if (newUser.getPassword().equals((newUser.getVerifyPass()))){
-                UserData.add(newUser);
+                UserData.add(newBlog);
                 return "redirect:";
             }
             else{
@@ -51,9 +47,6 @@ public class BlogController {
             }
 
         }
-    }
-*/
-
-
+    }*/
 
 }
