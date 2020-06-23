@@ -35,4 +35,8 @@ public class Blog {
     public void setBlog(String blog) {
         this.blog = blog;
     }
+
+    public int getBlogId() {
+        return blogId;
+    }
 }

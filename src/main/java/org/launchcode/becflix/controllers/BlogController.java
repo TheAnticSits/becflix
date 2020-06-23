@@ -1,7 +1,9 @@
 package org.launchcode.becflix.controllers;
 
 
+import org.launchcode.becflix.data.BlogData;
 import org.launchcode.becflix.data.UserData;
+import org.launchcode.becflix.models.Blog;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -16,7 +18,7 @@ import javax.validation.Valid;
 @RequestMapping("blog")
 public class BlogController {
 
-   /* @GetMapping
+    @GetMapping
     public String displayNewUser(Model model) {
         model.addAttribute("blogs", BlogData.getAll());
         model.addAttribute("title", "Blogs");
@@ -26,27 +28,19 @@ public class BlogController {
 
     @GetMapping("addUser")
     public String displayAddUserForm(Model model) {
-        model.addAttribute("title", "Add User");
+        model.addAttribute("title", "Add Blog");
         model.addAttribute(new Blog());
         return "user/addUser";
     }
 
-    @PostMapping(value = "addUser")
+    @PostMapping(value = "addBlog")
     public String processAddUserForm(@ModelAttribute @Valid Blog newBlog, Errors errors, Model model) {
-        if(errors.hasErrors()){
-            model.addAttribute("title", "New User");
+        model.addAttribute("title", "New User");
 
-            return "user/addUser";
-        } else {
-            if (newUser.getPassword().equals((newUser.getVerifyPass()))){
-                UserData.add(newBlog);
-                return "redirect:";
-            }
-            else{
-                return "user/addUser";
-            }
+        return "user/addUser";
+    }
 
-        }
-    }*/
+
+
 
 }

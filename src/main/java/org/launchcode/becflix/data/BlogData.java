@@ -1,8 +1,14 @@
 package org.launchcode.becflix.data;
 
+import org.launchcode.becflix.models.Blog;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+
 public class BlogData {
-/*
-    private static final Map<Integer, Blog> movies = new HashMap<>();
+
+    private static final Map<Integer, Blog> blogs = new HashMap<>();
 
     public static Collection<Blog> getAll(){
         return blogs.values();
@@ -12,14 +18,14 @@ public class BlogData {
         return blogs.get(id);
     }
 
-    public static void  add(Blog movie){
+    public static void  add(Blog blog){
 
-        blogs.put(movie.getBlogId(), blog);
+        blogs.put(blog.getBlogId(), blog);
     }
 
     public static void remove(int id){
 
         blogs.remove(id);
     }
-    */
+
 }
