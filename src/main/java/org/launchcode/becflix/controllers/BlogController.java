@@ -26,18 +26,18 @@ public class BlogController {
     }
 
 
-    @GetMapping("addUser")
-    public String displayAddUserForm(Model model) {
+    @GetMapping("addBlog")
+    public String displayAddBlogForm(Model model) {
         model.addAttribute("title", "Add Blog");
         model.addAttribute(new Blog());
-        return "user/addUser";
+        return "blog/addBlog";
     }
 
     @PostMapping(value = "addBlog")
-    public String processAddUserForm(@ModelAttribute @Valid Blog newBlog, Errors errors, Model model) {
-        model.addAttribute("title", "New User");
+    public String processAddBlogForm(@ModelAttribute @Valid Blog newBlog, Model model) {
+        model.addAttribute("title", "New Blog");
 
-        return "user/addUser";
+        return "blog/addBlog";
     }
 
 
