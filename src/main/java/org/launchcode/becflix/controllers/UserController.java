@@ -89,15 +89,4 @@ public class UserController {
         return "user/index";
     }
 
-    @GetMapping("blog")
-    public String displayUserBlog(){
-        return "user/blog";
-    }
-
-    @PostMapping("blog")
-    public String processUserBlog(){
-
-        return "redirect:";
-    }
-
 }

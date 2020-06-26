@@ -2,11 +2,9 @@ package org.launchcode.becflix.controllers;
 
 
 import org.launchcode.becflix.data.BlogData;
-import org.launchcode.becflix.data.UserData;
 import org.launchcode.becflix.models.Blog;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,11 +16,11 @@ import javax.validation.Valid;
 @RequestMapping("blog")
 public class BlogController {
 
-    @GetMapping
-    public String displayNewUser(Model model) {
+    @GetMapping("blog")
+    public String displayNewBlog(Model model) {
         model.addAttribute("blogs", BlogData.getAll());
         model.addAttribute("title", "Blogs");
-        return "user/index";
+        return "blog/index";
     }
 
 
