@@ -8,28 +8,28 @@
 <hr/>
 <article>
     <br/>
-    <big><h1>BecFlix New User</h1></big>
+    <big><h1>BecFlix New Blog</h1></big>
     <br/>
 </article>
 <hr/>
 <hr/>
-<!--adding navigation from fragments.-->
-<a href="/">Blog</a>
+<a href="/">Home Page</a>
 
-<h2>Add New Blog Entry</h2>
+<h2>Add New Blog</h2>
 
 <form class="user-questions" method="post" style="max-width:600px;">
-    <!--    all tags must be closed. "/"-->
-    <label for="name-field">Blog</label>
+    <label for="name-field">Blog Title</label>
     <br>
-    <input class="user-questions" id="name-field" th:field="${blog.blogs}" />
-
+    <input class="user-questions" id="name-field" th:field="${blog.blogTitle}" />
+    <p class="error" th:errors="${blog.blogTitle}"></p>
 
     <br>
     <br>
-
-
-    <input class="myButton" type="submit" value="Add Blog" />
+    Blog:<input type="text" th:field="${blog.blog}" />
+    <p class="error" th:errors="${blog.blog}"></p>
+    <br>
+    <br>
+    <input class="myButton" type="submit" value="Add User" />
 </form>
 </body>
 </html>
