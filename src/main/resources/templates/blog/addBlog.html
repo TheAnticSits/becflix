@@ -20,13 +20,13 @@
 <form class="user-questions" method="post" style="max-width:600px;">
     <label for="name-field">Blog Title</label>
     <br>
-    <input class="user-questions" id="name-field" th:field="${blog.blogTitle}" />
-    <p class="error" th:errors="${blog.blogTitle}"></p>
+    <input id="name-field" th:field="${blog.blogTitle}" />
+
 
     <br>
     <br>
     Blog:<input type="text" th:field="${blog.blog}" />
-    <p class="error" th:errors="${blog.blog}"></p>
+
     <br>
     <br>
     <input class="myButton" type="submit" value="Add User" />
