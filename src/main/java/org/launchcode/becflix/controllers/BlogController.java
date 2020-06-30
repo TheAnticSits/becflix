@@ -35,7 +35,7 @@ public class BlogController {
     public String processAddBlogForm(@ModelAttribute @Valid Blog newBlog, Model model) {
         model.addAttribute("title", "New Blog");
 
-        return "blog/addBlog";
+        return "blog/blog";
     }
 
 
