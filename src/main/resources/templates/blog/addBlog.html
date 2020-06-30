@@ -20,12 +20,12 @@
 <form class="user-questions" method="post" style="max-width:600px;">
     <label for="name-field">Blog Title</label>
     <br>
-    <input id="name-field" th:field="${blog.blogTitle}" />
+    <input id="name-field" type="text" th:field="${blog.blogTitle}" />
 
 
     <br>
     <br>
-    Blog:<input type="text" th:field="${blog.blog}" />
+    Blog:<input type="text" th:field="${blog.blogBody}" />
 
     <br>
     <br>

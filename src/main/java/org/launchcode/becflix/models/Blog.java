@@ -4,14 +4,14 @@ public class Blog {
 
     private int blogId;
     private String blogTitle;
-    private String blog;
+    private String blogBody;
 
     private static int nextId = 1;
 
-    public Blog (String blogTitle, String blog){
+    public Blog (String blogTitle, String blogBody){
 
         this.blogTitle = blogTitle;
-        this.blog = blog;
+        this.blogBody = blogBody;
 
     }
 
@@ -28,12 +28,12 @@ public class Blog {
         this.blogTitle = blogTitle;
     }
 
-    public String getBlog() {
-        return blog;
+    public String getBlogBody() {
+        return blogBody;
     }
 
-    public void setBlog(String blog) {
-        this.blog = blog;
+    public void setBlogBody(String blog) {
+        this.blogBody = blogBody;
     }
 
     public int getBlogId() {
