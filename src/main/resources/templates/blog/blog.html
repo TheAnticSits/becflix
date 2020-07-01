@@ -18,8 +18,25 @@
 <hr/>
 
 <a href="/">Home Page</a>
-
+<!--this needs to be changed to only display blogs from a single user.-->
 <h2>My Movie Blog</h2>
 <hr/>
+<table class="table">
 
+    <tr>
+        <th>Blog Title</th>
+        <th>||</th>
+        <th>Blog</th>
+
+    </tr>
+    <hr/>
+    <tr th:each="blog : ${blogs}">
+        <td th:text="${blog.blogTitle}"></td>
+        <td>||</td>
+        <td th:text="${blog.blogBody}"></td>
+
+
+    </tr>
+</table>
+<hr/>
 </body>
