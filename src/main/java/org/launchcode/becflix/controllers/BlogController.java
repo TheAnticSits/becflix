@@ -28,13 +28,14 @@ public class BlogController {
     public String displayAddBlogForm(Model model) {
         model.addAttribute("title", "Add Blog");
         model.addAttribute(new Blog());
+
         return "blog/addBlog";
     }
 
     @PostMapping(value = "addBlog")
     public String processAddBlogForm(@ModelAttribute @Valid Blog newBlog, Model model) {
         model.addAttribute("title", "New Blog");
-
+        BlogData.add(newBlog);
         return "blog/index";
     }
 
