@@ -21,11 +21,13 @@ public class BlogData {
     public static void  add(Blog blog){
 
         blogs.put(blog.getBlogId(), blog);
+
     }
 
     public static void remove(int id){
 
         blogs.remove(id);
     }
+
 
 }
