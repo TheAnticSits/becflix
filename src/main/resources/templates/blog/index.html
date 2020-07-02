@@ -18,23 +18,20 @@
 <a href="/blog/addBlog">Add A New Blog</a>
 
 <h2>Movie Blogs</h2>
-<table class="table">
 
-    <tr>
-        <th>Blog Title</th>
-        <th>||</th>
-        <th>Blog</th>
 
-    </tr>
-    <hr/>
     <tr th:each="blog : ${blogs}">
+        <th><big><big>Blog Title :</big></big></th>
         <td th:text="${blog.blogTitle}"></td>
-        <td>||</td>
+        <br>
+        <th><big><big>Blog :</big></big></th>
         <td th:text="${blog.blogBody}"></td>
+        <br>
+        <br>
 
 
     </tr>
-</table>
+
 <hr/>
 
 </body>
