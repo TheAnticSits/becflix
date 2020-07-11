@@ -20,11 +20,11 @@
 <h2>Movie Blogs</h2>
 
 
-<tr th:each="blog : ${blogs}">
+<tr th:each="blog : ${blogs}" class="blogheaders">
     <th><big><big class="blogheaders">Blog Title :</big></big></th>
     <td th:text="${blog.blogTitle}"></td>
     <br>
-    <th><big><big class="blogheaders">Blog :</big></big></th><br>
+    <th><big><big>Blog :</big></big></th><br>
     <td th:text="${blog.blogBody}"></td>
     <br>
     <br>
