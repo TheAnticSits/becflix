@@ -22,7 +22,7 @@
 
     <tr th:each="blog : ${blogs}">
 
-        <td class="blog" th:text="${blog.blogTitle}"></td>
+        <a class="blogHeaders"><td  th:text="${blog.blogTitle}"></td></a>
         <br>
 
         <td th:text="${blog.blogBody}"></td>
