@@ -117,6 +117,12 @@ color: #c83349;
 }
 
 .blogHeaders{
-font-size: 50px;
+font-size: 40px;
 color: teal;
+font-weight: bold;
+}
+
+.blogBody{
+font-family: cursive;
+font-size: 20px;
 }
