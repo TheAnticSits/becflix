@@ -32,11 +32,11 @@ public class BlogController {
         return "blog/addBlog";
     }
 
-    @PostMapping(value = "addBlog")
+    @PostMapping(value = "blog")
     public String processAddBlogForm(@ModelAttribute @Valid Blog newBlog, Model model) {
         model.addAttribute("title", "New Blog");
         BlogData.add(newBlog);
-        return "blog/index";
+        return "";
     }
 
 
