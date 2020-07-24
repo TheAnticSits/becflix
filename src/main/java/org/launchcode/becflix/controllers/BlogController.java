@@ -16,11 +16,20 @@ import javax.validation.Valid;
 @RequestMapping("blog")
 public class BlogController {
 
+    @RequestMapping(value = "")
+    public String index(Model model){
+
+        model.addAttribute("blogs", BlogData.getAll());
+
+        model.addAttribute("title", "BecFlix");
+        return "blog/index";
+    }
+
     @GetMapping("blog")
     public String displayNewBlog(Model model) {
         model.addAttribute("blogs", BlogData.getAll());
         model.addAttribute("title", "Blogs");
-        return "blog/index";
+        return "blog/addBlog";
     }
 
 
@@ -36,7 +45,7 @@ public class BlogController {
     public String processAddBlogForm(@ModelAttribute @Valid Blog newBlog, Model model) {
         model.addAttribute("title", "New Blog");
         BlogData.add(newBlog);
-        return "";
+        return "redirect:";
     }
 
 
