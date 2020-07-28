@@ -16,7 +16,7 @@ import javax.validation.Valid;
 @RequestMapping("blog")
 public class BlogController {
 
-    @RequestMapping(value = "")
+    @GetMapping(value = "")
     public String index(Model model){
 
         model.addAttribute("blogs", BlogData.getAll());
