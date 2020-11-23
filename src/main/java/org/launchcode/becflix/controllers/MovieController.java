@@ -49,6 +49,7 @@ public class MovieController {
             return "movie/addMovie";
         } else {
 */
+        
             System.out.println(newMovie.getDirector());
             MovieData.add(newMovie);
             return "redirect:";
